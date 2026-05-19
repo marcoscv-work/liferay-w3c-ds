@@ -1,21 +1,46 @@
-/* W3C notes — callout boxes (faithful to /components/notes.html) */
+/* W3C notes — verbatim from /dist/assets/styles/core.css.
+ * Structure: <div class="l-box note note--info" role="status"
+ *               tabindex="-1" data-anchor="no">
+ *              <h2 class="txt-saturn">Heading</h2>
+ *              <p>Content</p>
+ *            </div>
+ *
+ * `.l-box` provides border (1px solid) + padding (1.5rem); `.note`
+ * widens that border to 5px; `.note--{variant}` colours the border. */
 
-.note {
-  border-left: 4px solid var(--w3c-blue, #005A9C);
-  background-color: var(--w3c-mist-gray, #F8F8FB);
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
+.l-box {
+  border: 1px solid;
+  display: block;
+  padding: 1.5rem;
 }
 
-.note__heading {
+.txt-saturn {
+  font-size: var(--font-size-saturn, 1.125rem);
+  line-height: calc(27 / 18);
   font-weight: var(--font-weight-emphasis, 600);
   margin: 0 0 0.5rem;
 }
 
-.note__body p { margin: 0; }
-.note__body p + p { margin-top: 0.5rem; }
+.note {
+  border-width: 5px;
+  margin-bottom: 1.875rem;
+  max-width: 47rem;
+  background-color: var(--w3c-white, #FFFFFF);
+  color: var(--w3c-off-black, #111);
+  font-family: var(--font-family-base, 'Noto Sans', 'Trebuchet MS', Geneva, sans-serif);
+}
+.note > :first-child { margin-top: 0; }
+.note > :last-child  { margin-bottom: 0; }
+.note p { margin: 0 0 0.5rem; }
+.note a { color: var(--w3c-blue, #005A9C); }
 
-.note--info    { border-left-color: var(--w3c-blue, #005A9C); }
-.note--success { border-left-color: var(--w3c-success, #046704); }
-.note--warning { border-left-color: var(--w3c-warning, #C28605); background-color: #FDF6E5; }
-.note--error   { border-left-color: var(--w3c-error, #A82615); background-color: #FCEFED; }
+.note--info    { border-color: #002A56; }
+.note--success { border-color: #046704; }
+.note--warning { border-color: #C28605; }
+.note--error   { border-color: #A82615; }
+
+.note:focus,
+.note:focus-visible {
+  outline: 3px solid var(--w3c-yellow, #F9DC4A);
+  outline-offset: 2px;
+}

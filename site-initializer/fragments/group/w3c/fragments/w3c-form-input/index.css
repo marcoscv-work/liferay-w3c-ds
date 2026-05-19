@@ -1,8 +1,21 @@
-/* W3C form field — label above, hint under label, input below, error pattern */
+/* W3C form input — verbatim from core.css.
+ * Inputs: height 2.9375rem, border 2px solid currentColor, border-radius 0,
+ * padding 0.3125rem. Focus: yellow outline 3px + inset 2px box-shadow. */
+
+.visuallyhidden,
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 .form-field {
   margin-bottom: 1.5rem;
-  max-width: var(--text-measure, 41.25rem);
+  max-width: 41.25rem;
 }
 
 .form-field__label {
@@ -14,33 +27,38 @@
 .form-field__hint {
   margin: 0 0 0.5rem;
   color: var(--w3c-storm-gray, #545454);
-  font-size: var(--font-size-eris, 0.875rem);
+  font-size: 0.875rem;
 }
 
 .form-field__error {
   margin: 0 0 0.5rem;
-  color: var(--w3c-error, #A82615);
+  color: #A82615;
   font-weight: var(--font-weight-emphasis, 600);
 }
 
 .form-field__input {
+  height: 2.9375rem;
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  font-family: var(--font-family-base);
+  padding: 0.3125rem;
+  font-family: inherit;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.25;
   color: var(--w3c-off-black, #111);
   background-color: var(--w3c-white, #FFFFFF);
-  border: 2px solid var(--w3c-storm-gray, #545454);
+  border: 2px solid;
   border-radius: 0;
+  appearance: none;
 }
-.form-field__input:focus {
-  outline: 3px solid var(--w3c-yellow, #F9DC4A);
+.form-field__input:focus,
+.form-field__input:focus-visible {
+  outline: solid 3px #F9DC4A;
   outline-offset: 0;
-  border-color: var(--w3c-off-black, #111);
+  box-shadow: inset 0 0 0 2px;
 }
 
 .form-field--error .form-field__input {
-  border-color: var(--w3c-error, #A82615);
-  border-width: 3px;
+  border-color: #A82615;
+}
+.form-field--error .form-field__input:focus {
+  border-color: inherit;
 }

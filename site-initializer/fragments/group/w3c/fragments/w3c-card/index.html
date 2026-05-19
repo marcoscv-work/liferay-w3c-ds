@@ -3,22 +3,23 @@
 [#if mod != ''][#assign cls = cls + ' card--' + mod /][/#if]
 
 <div class="${cls}">
-  [#if configuration.showImage]
-    <div class="card__image">
-      <img data-lfr-editable-id="card-image" data-lfr-editable-type="image" src="" alt=""/>
-    </div>
-  [/#if]
   <div class="card__text">
     [#if configuration.showHeading]
-      <h3 class="card__heading" data-lfr-editable-id="card-heading" data-lfr-editable-type="text">Card heading</h3>
+      <h3 class="card__heading" data-lfr-editable-id="card-heading" data-lfr-editable-type="text">W3C starts web payments standards work</h3>
     [/#if]
     [#if configuration.showText]
-      <p data-lfr-editable-id="card-text" data-lfr-editable-type="rich-text">A brief description of the card content with relevant information for the reader.</p>
+      <p data-lfr-editable-id="card-text" data-lfr-editable-type="rich-text">New working group launched to make payments easier and more secure.</p>
     [/#if]
     [#if configuration.showLink]
-      <a class="card__link" href="#" data-lfr-editable-id="card-link" data-lfr-editable-type="link">
-        <span data-lfr-editable-id="card-link-text" data-lfr-editable-type="text">Read more</span>
+      <a href="#" data-lfr-editable-id="card-link" data-lfr-editable-type="link">
+        <span class="visuallyhidden" data-lfr-editable-id="card-link-context" data-lfr-editable-type="text">W3C starts web payments standards work</span>
+        <span data-lfr-editable-id="card-link-text" data-lfr-editable-type="text">Learn more</span>
       </a>
     [/#if]
   </div>
+  [#if configuration.showImage]
+    <div class="l-frame l-frame--3-2 card__image">
+      <img data-lfr-editable-id="card-image" data-lfr-editable-type="image" src="" alt=""/>
+    </div>
+  [/#if]
 </div>

@@ -1,21 +1,55 @@
-/* W3C "You may also like" — 3-card row */
+/* W3C crosslinks ("You may also like") — verbatim from core.css.
+ * Background = deep-blue #002A56 with white text. */
+
+.clean-list { list-style: none; margin: 0; padding: 0; }
+
+.l-center {
+  box-sizing: border-box;
+  width: 100%;
+  margin-inline: auto;
+  max-width: 70rem;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+  .l-center { padding-inline: 1.5rem; }
+}
 
 .crosslinks {
-  background-color: var(--w3c-mist-gray, #F8F8FB);
-  padding-block: 2.5rem;
-  border-top: 1px solid var(--w3c-twiki-gray, #CAC9C9);
+  background-color: #002A56;
+  color: #FFFFFF;
+  padding-block: 3.125rem;
+  font-family: var(--font-family-base, 'Noto Sans', 'Trebuchet MS', Geneva, sans-serif);
 }
 
-.crosslinks__heading {
-  font-size: var(--font-size-mars, 1.5rem);
-  margin: 0 0 1.5rem;
-}
+.crosslinks .component { margin-block: 0; }
 
-.crosslinks__list { gap: 1.5rem; }
-
-.crosslinks .card__heading a:focus,
-.crosslinks .card__heading a:focus-visible {
-  background-color: var(--w3c-yellow, #F9DC4A);
-  color: var(--w3c-black, #000);
-  text-decoration: none;
+.crosslinks .component--columns__intro {
+  margin-bottom: 1.5rem;
+  max-width: 41.25rem;
 }
+.crosslinks .component--columns__intro h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.crosslinks .component--columns__intro p {
+  margin: 0;
+  color: #FFFFFF;
+}
+.crosslinks .component--columns__intro a { color: #FFFFFF; text-decoration: underline; }
+.crosslinks .component--columns__intro a:focus { color: #111; }
+
+.crosslinks .component--columns--images > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.crosslinks .component--columns--images > ul > li {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 240px;
+  display: flex;
+}
+.crosslinks .component--columns--images > ul > li > * { flex: 1; }

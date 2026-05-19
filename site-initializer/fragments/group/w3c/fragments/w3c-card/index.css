@@ -1,65 +1,97 @@
-/* W3C cards — faithful to /components/cards.html */
+/* W3C cards — verbatim from /dist/assets/styles/core.css.
+ * Structure: <div class="card">
+ *              <div class="card__text">…</div>
+ *              <div class="l-frame l-frame--3-2 card__image"><img/></div>
+ *            </div> */
 
-.card {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--w3c-white, #FFFFFF);
-  border: 1px solid var(--w3c-twiki-gray, #CAC9C9);
+.l-frame {
   position: relative;
-  height: 100%;
-}
-
-.card__image {
-  margin: 0;
   overflow: hidden;
-  background: var(--w3c-mist-gray, #F8F8FB);
+  width: 100%;
 }
-.card__image img {
+.l-frame > img,
+.l-frame > video {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
+}
+.l-frame--3-2 { aspect-ratio: 3 / 2; }
+
+.card {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
 .card__text {
-  padding: 1.25rem 1.25rem 1.5rem;
+  flex-grow: 1;
+  order: 1;
+  padding-top: 1rem;
+  padding-inline: 1rem;
+  padding-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  gap: 0.5rem;
 }
 
 .card__heading {
-  font-size: var(--font-size-jupiter, 1.25rem);
-  line-height: calc(32 / 20);
-  margin: 0 0 0.5rem;
-}
-.card__heading a {
-  color: var(--w3c-off-black, #111);
-  text-decoration: none;
-  padding-inline: 0;
-}
-.card__heading a:hover {
-  color: var(--w3c-blue, #005A9C);
-  text-decoration: underline;
-  text-underline-offset: 0.25em;
-}
-.card__heading a:visited {
+  font-size: 1.125rem;   /* .txt-saturn */
+  line-height: 1.5;
+  font-weight: var(--font-weight-emphasis, 600);
+  margin: 0;
   color: var(--w3c-off-black, #111);
 }
 
 .card__text p {
-  margin: 0 0 1rem;
-  color: var(--w3c-storm-gray, #545454);
+  margin: 0;
+  color: var(--w3c-off-black, #111);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-.card__link {
-  margin-top: auto;
-  font-weight: var(--font-weight-emphasis, 600);
+.card__text a {
+  align-self: flex-start;
+  margin-top: 0.375rem;
+  color: var(--w3c-off-black, #111);
+  text-decoration: none;
+  padding-block: 0.625rem;
+}
+.card__text a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+.card__text a:focus {
+  background-color: var(--w3c-yellow, #F9DC4A);
+  background-image: linear-gradient(to top, #000 3px, #F9DC4A 3px, #F9DC4A);
+  color: #000;
+  text-decoration: none;
 }
 
-/* Modifier accent strips (top border) */
-.card--event  { border-top: 4px solid var(--w3c-coral, #FC7750); }
-.card--member { border-top: 4px solid var(--w3c-blue, #005A9C); }
-.card--news   { border-top: 4px solid var(--w3c-deep-blue, #002A56); }
-.card--group  { border-top: 4px solid var(--w3c-yellow, #F9DC4A); }
+.card__image {
+  margin: 0;
+}
+.card__image img {
+  border-radius: 0.25rem;
+}
+
+/* Modifier soft shadow (per W3C cards.html: "add a box-shadow style") */
+.card--event,
+.card--member,
+.card--news,
+.card--group {
+  box-shadow: -1px 1px 4px 0 rgba(55, 70, 95, 0.12);
+}
+
+/* Event cards — left border + sub-modifier colours (W3C exact values) */
+.card--event { border-left: 0.375rem solid; }
+.card--event.conference { border-color: #237978; } /* teal-green */
+.card--event.meeting    { border-color: #1BC0D7; } /* aqua */
+.card--event.talk       { border-color: #002A56; } /* deep-blue */
+.card--event.workshop   { border-color: #E93737; } /* red */
+
+/* Group card — readable text measure */
+.card--group .card__text { max-width: 41.25rem; }

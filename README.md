@@ -141,6 +141,33 @@ If you also want the dark style book applied site-wide:
   (not at `site-initializer/thumbnail.png` — keep one copy in each path for safety).
 - `fragment.json` must reference `"configurationPath": "configuration.json"` exactly.
 
+## Style Book preview — duplicated utility classes (temporary)
+
+The W3C theme client extension exposes a small set of utility classes
+(`.l-center`, `.l-cluster`, `.l-sidebar`, `.l-switcher`, `.clean-list`,
+`.with-icon`, `.icon`, `.visuallyhidden`, `.lead`, `.u-full-width`) that the
+fragments depend on for layout and accessibility.
+
+Liferay's **Style Book → fragment preview** only loads the fragment's own
+`index.css`. The theme client-extension stylesheet is NOT injected into that
+preview iframe, so a fragment that relies on theme-level helpers renders
+unstyled (e.g. the header collapses because `.clean-list` and `.l-center`
+have no effect).
+
+As a workaround, the affected fragments duplicate the small subset of utility
+classes they need at the top of their own `index.css`. Fragments containing
+duplicated utilities today (9):
+
+- `w3c-header`, `w3c-footer`, `w3c-hero`, `w3c-breadcrumb`, `w3c-crosslinks`,
+  `w3c-tag-list`, `w3c-pagination`, `w3c-styles-showcase`, `w3c-form-input`.
+
+**This duplication should be removed once Liferay loads theme CSS into the
+Style Book fragment preview.** When that upstream fix lands, delete the
+utility class declarations from the top of each of the 9 fragment `index.css`
+files above (everything before the fragment-specific styles like
+`.global-header`, `.hero`, `.breadcrumb`, etc.) and rely only on the
+theme-level definitions in `client-extensions/w3c-theme/src/index.css`.
+
 ## License
 
 This implementation is based on the publicly available W3C design system source. The W3C logo,

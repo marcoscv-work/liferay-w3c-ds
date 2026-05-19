@@ -7,12 +7,11 @@
                         "key": "w3c-hero"
                     },
                     "fragmentConfig": {
-                        "showIllustration": false,
-                        "isListing": true
+                        "isListing": true,
+                        "showIllustration": false
                     },
                     "fragmentFields": [
                         {
-                            "id": "hero-title",
                             "value": {
                                 "fragmentLink": {},
                                 "text": {
@@ -23,7 +22,6 @@
                             }
                         },
                         {
-                            "id": "hero-lead",
                             "value": {
                                 "fragmentLink": {},
                                 "text": {
@@ -55,7 +53,41 @@
                                 "key": "w3c-breadcrumb"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "/"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"
@@ -68,8 +100,12 @@
                     "cssClasses": [
                         "w3c-section--py-md"
                     ],
+                    "fragmentStyle": {
+                        "marginTop": "5"
+                    },
                     "indexed": true,
                     "layout": {
+                        "marginTop": 4,
                         "widthType": "Fixed"
                     }
                 },
@@ -80,9 +116,9 @@
                                 "key": "w3c-styles-showcase"
                             },
                             "fragmentConfig": {
+                                "showIcons": true,
                                 "showColors": true,
-                                "showTypography": true,
-                                "showIcons": true
+                                "showTypography": true
                             },
                             "fragmentFields": [],
                             "indexed": true

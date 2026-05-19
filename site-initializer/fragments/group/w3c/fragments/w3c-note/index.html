@@ -1,6 +1,10 @@
-<div class="note note--${configuration.variant!'info'}" role="note">
-  <p class="note__heading" data-lfr-editable-id="note-heading" data-lfr-editable-type="text">Note</p>
-  <div class="note__body" data-lfr-editable-id="note-body" data-lfr-editable-type="rich-text">
-    <p>An informational note. Notes call attention to relevant context without breaking the reading flow.</p>
+[#assign variant = configuration.variant!'info' /]
+[#assign role = 'status' /]
+[#if variant == 'error'][#assign role = 'alert' /][/#if]
+
+<div class="l-box note note--${variant}" role="${role}" tabindex="-1" data-anchor="no">
+  <h2 class="txt-saturn" data-lfr-editable-id="note-heading" data-lfr-editable-type="text">Informative note heading</h2>
+  <div data-lfr-editable-id="note-body" data-lfr-editable-type="rich-text">
+    <p>An informative note. Notes call attention to relevant context without breaking the reading flow.</p>
   </div>
 </div>

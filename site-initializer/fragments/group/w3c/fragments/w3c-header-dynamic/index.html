@@ -1,0 +1,92 @@
+<header class="global-header global-header--dynamic" data-w3c-header-dynamic role="banner">
+  <span role="status" aria-live="polite"></span>
+
+  [#if configuration.showBanner]
+    <div class="banner">
+      <div class="banner__inner l-center">
+        <p data-lfr-editable-id="banner-text" data-lfr-editable-type="rich-text">
+          This is a new website. <a href="https://github.com/w3c/w3c-website">Give feedback</a> to help us improve it.
+        </p>
+      </div>
+    </div>
+  [/#if]
+
+  [#if configuration.showLang]
+    <nav id="lang-nav" aria-label="Language options">
+      <div class="l-center">
+        <div class="l-cluster lang-nav__cluster">
+          <ul class="clean-list" role="list">
+            <li><a hreflang="ja" lang="ja" href="#" data-lfr-editable-id="lang-ja" data-lfr-editable-type="link">日本語ホームページ<span class="visuallyhidden" lang="en"> (Japanese website)</span></a></li>
+            <li><a hreflang="zh-hans" lang="zh-hans" href="#" data-lfr-editable-id="lang-zh" data-lfr-editable-type="link">简体中文首页<span class="visuallyhidden" lang="en"> (Chinese website)</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  [/#if]
+
+  <nav id="global-nav" aria-label="Main">
+    <div class="global-nav__inner l-center">
+      <a class="logo-link" href="/" data-lfr-editable-id="logo-link" data-lfr-editable-type="link">
+        <span class="logo">
+          <img src="[resources:logo-w3c.svg]" alt="W3C" role="img"/>
+        </span>
+        <span class="visuallyhidden">W3C homepage</span>
+      </a>
+
+      <button
+        type="button"
+        class="global-nav__mobile-toggle"
+        data-trigger="mobile-nav"
+        aria-controls="global-nav-panel"
+        aria-expanded="false"
+      >
+        <span class="global-nav__mobile-toggle-icon" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="global-nav__mobile-toggle-label">Menu</span>
+      </button>
+
+      <div class="global-nav__panel" id="global-nav-panel">
+        <button type="button" class="global-nav__close" data-trigger="mobile-nav-close" aria-label="Close menu">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <!-- Liferay site-navigation widget — renders the public site menu. -->
+        <div class="global-nav__widget-nav">
+          <lfr-widget-nav></lfr-widget-nav>
+        </div>
+
+        <ul class="clean-list global-nav__utility" role="list">
+          [#if configuration.showSearch]
+            <li class="global-nav__utility-item global-nav__utility-item--search">
+              <!-- Liferay search-bar widget. -->
+              <lfr-widget-search-bar></lfr-widget-search-bar>
+            </li>
+          [/#if]
+
+          [#if configuration.showSignIn]
+            <li class="global-nav__utility-item">
+              [#if themeDisplay.isSignedIn()]
+                <a class="with-icon global-nav__utility-link"
+                   href="${htmlUtil.escape(themeDisplay.getURLSignOut())}?referer=${themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getSiteGroup().getFriendlyURL()}"
+                   aria-label="Sign out">
+                  <img class="icon" src="[resources:icon-avatar.svg]" alt="" aria-hidden="true"/>
+                  <span>Sign out</span>
+                </a>
+              [#else]
+                <a class="with-icon global-nav__utility-link"
+                   href="${htmlUtil.escape(themeDisplay.getURLSignIn())}"
+                   aria-label="Sign in">
+                  <img class="icon" src="[resources:icon-avatar.svg]" alt="" aria-hidden="true"/>
+                  <span>Sign in</span>
+                </a>
+              [/#if]
+            </li>
+          [/#if]
+        </ul>
+      </div>
+
+      <div class="global-nav__backdrop" data-trigger="mobile-nav-close" aria-hidden="true"></div>
+    </div>
+  </nav>
+</header>

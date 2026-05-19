@@ -1,25 +1,34 @@
-/* W3C blockquote */
+/* W3C blockquote (component--quote) — verbatim from core.css.
+ * PURPLE (#75336C) bold, font-size 1.125rem, with a vertical purple bar
+ * on the left via ::before. */
 
-.quote {
-  margin: 1.5rem 0;
-  padding: 0 0 0 1.5rem;
-  border-left: 4px solid var(--w3c-blue, #005A9C);
-  max-width: var(--text-measure, 41.25rem);
-}
-
-.quote__body {
-  margin: 0;
-  font-size: var(--font-size-jupiter, 1.25rem);
+.component--quote {
+  position: relative;
+  font-size: 1.125rem;
   line-height: 1.5;
-  font-style: italic;
+  color: #75336C;
+  font-weight: bold;
+  margin-inline-end: 0;
+  margin-inline-start: 0.625rem;
+  padding: 1.25rem;
+  font-family: var(--font-family-base, 'Noto Sans', 'Trebuchet MS', Geneva, sans-serif);
 }
-
-.quote__body p { margin: 0; }
-
-.quote__attribution {
-  margin-top: 0.75rem;
-  font-size: var(--font-size-eris, 0.875rem);
-  color: var(--w3c-storm-gray, #545454);
-  font-style: normal;
+.component--quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.625rem;
+  width: 0.625rem;
+  background-color: #75336C;
+  border-radius: 0.3125rem;
 }
-.quote__attribution::before { content: "— "; }
+.component--quote > * { max-width: 39.375rem; }
+.component--quote p { margin: 0 0 0.5rem; }
+.component--quote footer {
+  margin-top: 0.5rem;
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #75336C;
+}
+.component--quote footer::before { content: "— "; }

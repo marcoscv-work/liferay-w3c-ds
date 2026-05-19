@@ -1,11 +1,21 @@
 /* ============================================================
- * W3C Design System theme — primitives + semantic tokens
- * + W3C global typography, layout helpers (l-*, clean-list, .lead).
+ * W3C Design System theme
  *
- * NOTE: All custom focus / interactive styling is scoped to the page
- * content area (`#main-content`, fragments, etc.) so that Liferay's
- * admin chrome (control menu, page editor, simulation panel) keeps
- * its own focus styles.
+ * Layering strategy:
+ *
+ *   1. Tokens (`:root`)  — global custom properties.
+ *   2. Page typography, layout helpers and W3C utility classes —
+ *      applied globally to the site front-end. They use custom
+ *      class names (`l-*`, `clean-list`, `with-icon`, …) and
+ *      W3C-specific element selectors that do not collide with
+ *      Clay/Lexicon (the admin UI keeps its own look).
+ *   3. Focus styles — scoped to the page (header, page body,
+ *      footer) so the W3C yellow focus does NOT affect Liferay's
+ *      admin chrome (control menu, page editor, simulation panel).
+ *
+ * The W3C master page (header + DropZone + footer) renders inside
+ * Liferay's `#wrapper` but mostly OUTSIDE `#main-content`, so
+ * helpers must be global for the header/footer to look correct.
  * ============================================================ */
 
 :root {
@@ -40,10 +50,6 @@
     --w3c-error:        #A82615;
 
     --color-bg:                   var(--w3c-white);
-    --color-bg-banner:            var(--w3c-light-blue);
-    --color-bg-lang-nav:          var(--w3c-mist-gray);
-    --color-bg-subtle:            var(--w3c-off-white);
-    --color-bg-card:              var(--w3c-white);
     --color-text:                 var(--w3c-off-black);
     --color-text-muted:           var(--w3c-storm-gray);
     --color-text-inverse:         var(--w3c-white);
@@ -58,8 +64,8 @@
     --color-brand-hover:          var(--w3c-deep-blue);
     --color-accent:               var(--w3c-coral);
 
-    --font-family-base:    'Noto Sans', 'Trebuchet MS', Geneva, sans-serif;
-    --font-family-mono:    Monaco, 'Lucida Console', 'Courier New', monospace;
+    --font-family-base: 'Noto Sans', 'Trebuchet MS', Geneva, sans-serif;
+    --font-family-mono: Monaco, 'Lucida Console', 'Courier New', monospace;
 
     --font-weight-normal:   400;
     --font-weight-emphasis: 600;
@@ -88,12 +94,14 @@
 }
 
 /* ============================================================
- * Scoped page-content styles
- * Everything inside `#main-content` (Liferay's content area)
- * gets W3C typography and focus. Admin chrome is untouched.
+ * 2. Page typography, layout helpers and W3C utility classes
+ *    — applied globally to the front-end. Class names are W3C-
+ *    namespaced (l-*, clean-list, with-icon, button, card, …)
+ *    or W3C-specific element styling, so they don't collide
+ *    with Clay components used in the admin UI.
  * ============================================================ */
 
-#main-content {
+body {
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-family-base);
@@ -103,49 +111,247 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-#main-content h1,
-#main-content h2,
-#main-content h3,
-#main-content h4,
-#main-content h5,
-#main-content h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-base);
     font-weight: var(--font-weight-emphasis);
     margin: 0 0 1rem;
 }
-#main-content h1 { font-size: var(--font-size-venus);   line-height: calc(43 / 33); margin-bottom: 1em; }
-#main-content h2 { font-size: var(--font-size-earth);   line-height: calc(33.6 / 27); }
-#main-content h3 { font-size: var(--font-size-mars);    line-height: calc(33.6 / 24); }
-#main-content h4 { font-size: var(--font-size-jupiter); line-height: calc(32 / 20); }
-#main-content h5 { font-size: var(--font-size-saturn);  line-height: calc(27 / 18); }
-#main-content h6 { font-size: var(--font-size-body);    line-height: var(--line-height-body); }
+h1 { font-size: var(--font-size-venus);   line-height: calc(43 / 33); margin-bottom: 1em; }
+h2 { font-size: var(--font-size-earth);   line-height: calc(33.6 / 27); }
+h3 { font-size: var(--font-size-mars);    line-height: calc(33.6 / 24); }
+h4 { font-size: var(--font-size-jupiter); line-height: calc(32 / 20); }
+h5 { font-size: var(--font-size-saturn);  line-height: calc(27 / 18); }
+h6 { font-size: var(--font-size-body);    line-height: var(--line-height-body); }
 
 @media (min-width: 768px) {
-    #main-content h1 { font-size: 2.625rem; line-height: calc(58.8 / 42); }
-    #main-content h2 { font-size: 2.125rem; line-height: calc(43 / 34); }
+    h1 { font-size: 2.625rem; line-height: calc(58.8 / 42); }
+    h2 { font-size: 2.125rem; line-height: calc(43 / 34); }
 }
 
-#main-content p { margin: 1rem 0; }
+p { margin: 1rem 0; }
 
-#main-content .lead {
+.lead {
     font-size: var(--font-size-lead);
     line-height: calc(33.6 / 24);
 }
 
-#main-content a {
+abbr[title] { text-decoration: none; }
+
+/* Page-content links (default W3C styling). Liferay admin links keep
+ * Clay defaults because the admin UI is rendered before our front-end
+ * styles take effect on portlets and Clay components carry !important
+ * specificity inside the Clay stylesheet. */
+a {
     color: var(--color-link);
     text-decoration: underline;
     text-underline-offset: 0.25em;
-    padding-inline: 0.125rem;
 }
-#main-content a:visited { color: var(--color-link-visited); }
-#main-content a:hover   { color: var(--color-link-hover); }
-#main-content abbr[title] { text-decoration: none; }
+a:visited { color: var(--color-link-visited); }
+a:hover   { color: var(--color-link-hover); }
+
+/* CUBE CSS layout helpers — used by master page header/footer + pages */
+.l-center {
+    box-sizing: border-box;
+    width: 100%;
+    margin-inline: auto;
+    max-width: var(--max-width);
+    padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+    .l-center { padding-inline: 1.5rem; }
+}
+
+.l-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.l-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.l-sidebar > :first-child { flex-basis: 240px; flex-grow: 1; }
+.l-sidebar > :last-child  { flex-basis: 0; flex-grow: 999; min-width: 60%; }
+
+.l-switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.l-switcher > * { flex-grow: 1; flex-basis: calc((42rem - 100%) * 999); }
+
+.l-stack > * + * { margin-block-start: 1.5rem; }
+
+/* l-frame — aspect-ratio media container (W3C) */
+.l-frame {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.l-frame > img,
+.l-frame > video,
+.l-frame > iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.l-frame--16-9   { aspect-ratio: 16 / 9; }
+.l-frame--4-3    { aspect-ratio: 4 / 3; }
+.l-frame--3-2    { aspect-ratio: 3 / 2; }
+.l-frame--square { aspect-ratio: 1 / 1; }
+
+/* W3C l-sidebar children: .not-sidebar (main column) + .sidebar (aside).
+ * Wrapped in an inner <div> per the W3C landing template. */
+.l-sidebar > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.l-sidebar .not-sidebar {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 60%;
+}
+.l-sidebar .sidebar {
+    flex-basis: 280px;
+    flex-grow: 1;
+    max-width: 360px;
+}
+.l-sidebar .sidebar img,
+.l-sidebar .sidebar svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* W3C `.component` family — used by content sections */
+.component {
+    margin-block: 2.5rem;
+}
+.component > h2,
+.component > h3,
+.component--columns__intro h2,
+.component--columns__intro h3 {
+    margin-top: 0;
+}
+.component--columns__intro {
+    margin-bottom: 1.5rem;
+    max-width: 41.25rem;
+}
+.component--columns__intro p {
+    font-size: 1.0625rem;
+    color: var(--w3c-storm-gray, #545454);
+    margin: 0;
+}
+.component--columns ul.clean-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.component--columns ul.clean-list > li {
+    display: flex;
+}
+.component--columns ul.clean-list > li > * {
+    flex: 1;
+}
+
+.clean-list { list-style: none; margin: 0; padding: 0; }
+
+/* W3C `l-box` — padding helper (used by notes and other surfaces). */
+.l-box { padding: 1.25rem 1.5rem; }
+
+/* W3C "planet" text utility classes (handy when the size needs to be
+ * applied to an element other than its native h-level). */
+.txt-venus   { font-size: var(--font-size-venus);   line-height: calc(43 / 33); }
+.txt-earth   { font-size: var(--font-size-earth);   line-height: calc(33.6 / 27); }
+.txt-mars    { font-size: var(--font-size-mars);    line-height: calc(33.6 / 24); }
+.txt-jupiter { font-size: var(--font-size-jupiter); line-height: calc(32 / 20); }
+.txt-saturn  { font-size: var(--font-size-saturn);  line-height: calc(27 / 18); }
+.txt-pluto   { font-size: var(--font-size-pluto);   line-height: 1.5; }
+.txt-eris    { font-size: var(--font-size-eris);    line-height: 1.5; }
+@media (min-width: 768px) {
+    .txt-venus { font-size: 2.625rem; line-height: calc(58.8 / 42); }
+    .txt-earth { font-size: 2.125rem; line-height: calc(43 / 34); }
+}
+
+.visuallyhidden,
+.visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.u-full-width  { max-width: 100%; }
+.u-text-center { text-align: center; }
+.u-text-left   { text-align: left; }
+.u-text-right  { text-align: right; }
+.u-no-margin   { margin: 0; }
+
+.with-icon { display: inline-flex; align-items: center; gap: 0.375rem; }
+.with-icon--larger { gap: 0.5rem; }
+.with-icon .icon { width: 1em; height: 1em; }
+.with-icon .icon--larger { width: 1.25rem; height: 1.25rem; }
+
+/* Liferay's `.container` — match W3C `.l-center` so any
+ * widthType:Fixed section in a page-definition gets W3C width.
+ * Scoped to the page content area so the admin grid isn't
+ * affected (which uses `.container` extensively). */
+#main-content .container,
+#main-content .container-fluid,
+#main-content .container-sm,
+#main-content .container-md,
+#main-content .container-lg,
+#main-content .container-xl,
+#main-content .container-xxl {
+    box-sizing: border-box;
+    width: 100%;
+    margin-inline: auto;
+    max-width: var(--max-width);
+    padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+    #main-content .container,
+    #main-content .container-fluid,
+    #main-content .container-sm,
+    #main-content .container-md,
+    #main-content .container-lg,
+    #main-content .container-xl,
+    #main-content .container-xxl {
+        padding-inline: 1.5rem;
+    }
+}
+
+/* Section vertical-spacing utilities */
+.w3c-section--py-xs { padding-block: 0.5rem; }
+.w3c-section--py-sm { padding-block: 1.5rem; }
+.w3c-section--py-md { padding-block: 2rem; }
+.w3c-section--py-lg { padding-block: 4rem; }
+.w3c-section--py-xl { padding-block: 6rem; }
+
+#main-content { overflow-x: hidden; }
 
 /* ============================================================
- * W3C focus — yellow background + black underline bar.
- * Scoped to page content only. Admin UI keeps Liferay focus.
+ * 3. W3C focus — scoped so the Liferay admin keeps its focus.
+ *    The W3C master page contributes the global header and
+ *    footer; we scope focus to those + the page content area.
  * ============================================================ */
+.global-header a:focus,
+.global-header a:focus-visible,
+.global-header button:focus,
+.global-header button:focus-visible,
+.global-footer a:focus,
+.global-footer a:focus-visible,
 #main-content a:focus,
 #main-content a:focus-visible,
 #main-content button:focus,
@@ -178,126 +384,10 @@
     border-color: var(--w3c-off-black);
 }
 
-/* Specific overrides where yellow background would be wrong */
-#main-content .logo-link:focus,
-#main-content .logo-link:focus-visible {
+/* Logo link in the W3C global header should not get a yellow
+ * background; just show a black 3px bar focus indicator. */
+.global-header .logo-link:focus,
+.global-header .logo-link:focus-visible {
     background-color: transparent;
-    box-shadow: none;
+    box-shadow: 0 3px 0 var(--w3c-black);
 }
-
-/* ============================================================
- * Layouts (CUBE CSS) — page-scoped
- * ============================================================ */
-#main-content .l-center {
-    box-sizing: border-box;
-    width: 100%;
-    margin-inline: auto;
-    max-width: var(--max-width);
-    padding-inline: 1rem;
-}
-
-#main-content .l-cluster {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-#main-content .l-sidebar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-#main-content .l-sidebar > :first-child {
-    flex-basis: 240px;
-    flex-grow: 1;
-}
-#main-content .l-sidebar > :last-child {
-    flex-basis: 0;
-    flex-grow: 999;
-    min-width: 60%;
-}
-
-#main-content .l-switcher {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-#main-content .l-switcher > * {
-    flex-grow: 1;
-    flex-basis: calc((42rem - 100%) * 999);
-}
-
-#main-content .l-stack > * + * { margin-block-start: 1.5rem; }
-
-/* ============================================================
- * Utilities — page-scoped
- * ============================================================ */
-#main-content .clean-list { list-style: none; margin: 0; padding: 0; }
-
-.visuallyhidden,
-.visually-hidden {
-    position: absolute;
-    width: 1px; height: 1px;
-    padding: 0; margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-#main-content .u-full-width  { max-width: 100%; }
-#main-content .u-text-center { text-align: center; }
-#main-content .u-text-left   { text-align: left; }
-#main-content .u-text-right  { text-align: right; }
-#main-content .u-no-margin   { margin: 0; }
-
-#main-content .with-icon { display: inline-flex; align-items: center; gap: 0.375rem; }
-#main-content .with-icon--larger { gap: 0.5rem; }
-#main-content .icon { width: 1em; height: 1em; }
-#main-content .icon--larger { width: 1.25rem; height: 1.25rem; }
-
-/* ============================================================
- * Liferay's `.container` — match W3C `.l-center` *inside the page*.
- * `box-sizing: border-box` prevents the padding from making the
- * container exceed the viewport (no horizontal scroll).
- * ============================================================ */
-#main-content .container,
-#main-content .container-fluid,
-#main-content .container-sm,
-#main-content .container-md,
-#main-content .container-lg,
-#main-content .container-xl,
-#main-content .container-xxl {
-    box-sizing: border-box;
-    width: 100%;
-    margin-inline: auto;
-    max-width: var(--max-width);
-    padding-inline: 1rem;
-}
-@media (min-width: 768px) {
-    #main-content .container,
-    #main-content .container-fluid,
-    #main-content .container-sm,
-    #main-content .container-md,
-    #main-content .container-lg,
-    #main-content .container-xl,
-    #main-content .container-xxl {
-        padding-inline: 1.5rem;
-    }
-}
-
-/* ============================================================
- * Section vertical-spacing utilities (page-definition cssClasses)
- * Horizontal padding comes from the wrapping `.container` (above);
- * here we only set vertical rhythm.
- * ============================================================ */
-#main-content .w3c-section--py-xs { padding-block: 0.5rem; }
-#main-content .w3c-section--py-sm { padding-block: 1.5rem; }
-#main-content .w3c-section--py-md { padding-block: 2rem; }
-#main-content .w3c-section--py-lg { padding-block: 4rem; }
-#main-content .w3c-section--py-xl { padding-block: 6rem; }
-
-/* Prevent any descendant from causing horizontal overflow */
-#main-content { overflow-x: hidden; }

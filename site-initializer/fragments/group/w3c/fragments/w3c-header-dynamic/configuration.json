@@ -1,0 +1,13 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {"defaultValue": "true", "label": "Show feedback banner",                           "name": "showBanner",  "type": "checkbox"},
+        {"defaultValue": "true", "label": "Show language nav",                              "name": "showLang",    "type": "checkbox"},
+        {"defaultValue": "false", "label": "Show Liferay search-bar widget (lfr-widget-search-bar)", "name": "showSearch", "type": "checkbox"},
+        {"defaultValue": "true", "label": "Show Sign in / Sign out",                        "name": "showSignIn",  "type": "checkbox"}
+      ],
+      "label": "Dynamic header"
+    }
+  ]
+}

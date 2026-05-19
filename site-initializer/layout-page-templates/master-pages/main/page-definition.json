@@ -3,7 +3,7 @@
         "pageElements": [
             {
                 "definition": {
-                    "fragment": {"key": "w3c-header"},
+                    "fragment": {"key": "w3c-header-dynamic"},
                     "fragmentConfig": {},
                     "fragmentFields": [],
                     "indexed": true

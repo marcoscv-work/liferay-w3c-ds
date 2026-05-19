@@ -1,3 +1,6 @@
+.clean-list { list-style: none; margin: 0; padding: 0; }
+.lead { font-size: 1.4375rem; line-height: calc(33.6 / 24); }
+
 .styles-showcase__section { margin: 0 0 4rem; }
 
 .swatches {

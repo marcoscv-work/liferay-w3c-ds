@@ -7,12 +7,21 @@
                         "key": "w3c-hero"
                     },
                     "fragmentConfig": {
-                        "showIllustration": true,
-                        "isListing": false
+                        "isListing": false,
+                        "showIllustration": true
                     },
                     "fragmentFields": [
                         {
-                            "id": "hero-title",
+                            "value": {
+                                "fragmentImage": {
+                                    "url": {
+                                        "value_i18n": {}
+                                    }
+                                },
+                                "fragmentLink": {}
+                            }
+                        },
+                        {
                             "value": {
                                 "fragmentLink": {},
                                 "text": {
@@ -23,7 +32,6 @@
                             }
                         },
                         {
-                            "id": "hero-lead",
                             "value": {
                                 "fragmentLink": {},
                                 "text": {
@@ -55,7 +63,41 @@
                                 "key": "w3c-breadcrumb"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "/"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"
@@ -80,7 +122,18 @@
                                 "key": "w3c-quote"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"
@@ -102,14 +155,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -127,11 +179,37 @@
                     {
                         "definition": {
                             "gutters": true,
-                            "numberOfColumns": 3
+                            "indexed": true,
+                            "modulesPerRow": 3,
+                            "numberOfColumns": 3,
+                            "reverseOrder": false,
+                            "rowViewports": [
+                                {
+                                    "rowViewportDefinition": {}
+                                },
+                                {
+                                    "rowViewportDefinition": {}
+                                },
+                                {
+                                    "rowViewportDefinition": {}
+                                }
+                            ],
+                            "verticalAlignment": "top"
                         },
                         "pageElements": [
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 4
                                 },
                                 "pageElements": [
@@ -142,14 +220,33 @@
                                             },
                                             "fragmentConfig": {
                                                 "modifier": "news",
-                                                "showImage": true,
-                                                "showHeading": true,
                                                 "showText": true,
-                                                "showLink": true
+                                                "showImage": true,
+                                                "showLink": true,
+                                                "showHeading": true
                                             },
                                             "fragmentFields": [
                                                 {
-                                                    "id": "card-heading",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Read more"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentImage": {
+                                                            "url": {
+                                                                "value_i18n": {}
+                                                            }
+                                                        },
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
                                                     "value": {
                                                         "fragmentLink": {},
                                                         "text": {
@@ -160,23 +257,27 @@
                                                     }
                                                 },
                                                 {
-                                                    "id": "card-text",
                                                     "value": {
-                                                        "fragmentLink": {},
-                                                        "text": {
-                                                            "value_i18n": {
-                                                                "en_US": "A new working group at W3C will standardize the way merchants and customers exchange information on the Web."
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {
+                                                            "value": {
+                                                                "href": {
+                                                                    "value": "#"
+                                                                }
                                                             }
                                                         }
                                                     }
                                                 },
                                                 {
-                                                    "id": "card-link-text",
                                                     "value": {
                                                         "fragmentLink": {},
                                                         "text": {
                                                             "value_i18n": {
-                                                                "en_US": "Read more"
+                                                                "en_US": "A new working group at W3C will standardize the way merchants and customers exchange information on the Web."
                                                             }
                                                         }
                                                     }
@@ -191,6 +292,17 @@
                             },
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 4
                                 },
                                 "pageElements": [
@@ -201,14 +313,33 @@
                                             },
                                             "fragmentConfig": {
                                                 "modifier": "news",
-                                                "showImage": true,
-                                                "showHeading": true,
                                                 "showText": true,
-                                                "showLink": true
+                                                "showImage": true,
+                                                "showLink": true,
+                                                "showHeading": true
                                             },
                                             "fragmentFields": [
                                                 {
-                                                    "id": "card-heading",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Read more"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentImage": {
+                                                            "url": {
+                                                                "value_i18n": {}
+                                                            }
+                                                        },
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
                                                     "value": {
                                                         "fragmentLink": {},
                                                         "text": {
@@ -219,23 +350,27 @@
                                                     }
                                                 },
                                                 {
-                                                    "id": "card-text",
                                                     "value": {
-                                                        "fragmentLink": {},
-                                                        "text": {
-                                                            "value_i18n": {
-                                                                "en_US": "Extensions will help authors meet accessibility needs of people with cognitive, learning and low-vision disabilities."
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {
+                                                            "value": {
+                                                                "href": {
+                                                                    "value": "#"
+                                                                }
                                                             }
                                                         }
                                                     }
                                                 },
                                                 {
-                                                    "id": "card-link-text",
                                                     "value": {
                                                         "fragmentLink": {},
                                                         "text": {
                                                             "value_i18n": {
-                                                                "en_US": "Read more"
+                                                                "en_US": "Extensions will help authors meet accessibility needs of people with cognitive, learning and low-vision disabilities."
                                                             }
                                                         }
                                                     }
@@ -250,6 +385,17 @@
                             },
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 4
                                 },
                                 "pageElements": [
@@ -260,14 +406,33 @@
                                             },
                                             "fragmentConfig": {
                                                 "modifier": "news",
-                                                "showImage": true,
-                                                "showHeading": true,
                                                 "showText": true,
-                                                "showLink": true
+                                                "showImage": true,
+                                                "showLink": true,
+                                                "showHeading": true
                                             },
                                             "fragmentFields": [
                                                 {
-                                                    "id": "card-heading",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Read more"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentImage": {
+                                                            "url": {
+                                                                "value_i18n": {}
+                                                            }
+                                                        },
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
                                                     "value": {
                                                         "fragmentLink": {},
                                                         "text": {
@@ -278,23 +443,27 @@
                                                     }
                                                 },
                                                 {
-                                                    "id": "card-text",
                                                     "value": {
-                                                        "fragmentLink": {},
-                                                        "text": {
-                                                            "value_i18n": {
-                                                                "en_US": "W3C contributes its perspective on the long-term role of the Web in mobile communications."
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {
+                                                            "value": {
+                                                                "href": {
+                                                                    "value": "#"
+                                                                }
                                                             }
                                                         }
                                                     }
                                                 },
                                                 {
-                                                    "id": "card-link-text",
                                                     "value": {
                                                         "fragmentLink": {},
                                                         "text": {
                                                             "value_i18n": {
-                                                                "en_US": "Read more"
+                                                                "en_US": "W3C contributes its perspective on the long-term role of the Web in mobile communications."
                                                             }
                                                         }
                                                     }
@@ -318,8 +487,14 @@
                     "cssClasses": [
                         "w3c-section--py-md"
                     ],
+                    "fragmentStyle": {
+                        "marginBottom": "5",
+                        "marginTop": "5"
+                    },
                     "indexed": true,
                     "layout": {
+                        "marginBottom": 4,
+                        "marginTop": 4,
                         "widthType": "Fixed"
                     }
                 },
@@ -327,14 +502,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -355,7 +529,38 @@
                                 "key": "w3c-accordion"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"
@@ -366,9 +571,7 @@
             {
                 "definition": {
                     "indexed": true,
-                    "layout": {
-                        "widthType": "Fluid"
-                    }
+                    "layout": {}
                 },
                 "pageElements": [
                     {
@@ -377,7 +580,96 @@
                                 "key": "w3c-crosslinks"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"

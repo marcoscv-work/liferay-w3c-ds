@@ -1,7 +1,7 @@
 (function() {
   var root = (typeof fragmentElement !== 'undefined' && fragmentElement) ? fragmentElement : document;
-  var header = root.querySelector ? root.querySelector('[data-w3c-header]') : null;
-  if (!header && root.matches && root.matches('[data-w3c-header]')) header = root;
+  var header = root.querySelector ? root.querySelector('[data-w3c-header-dynamic]') : null;
+  if (!header && root.matches && root.matches('[data-w3c-header-dynamic]')) header = root;
   if (!header) return;
 
   var openBtn  = header.querySelector('[data-trigger="mobile-nav"]');
@@ -11,9 +11,6 @@
 
   var mqMobile = window.matchMedia('(max-width: 768px)');
 
-  // Keep the panel out of the tab order / accessibility tree when it's the
-  // off-canvas variant (mobile) AND closed. On desktop the panel is inline
-  // and must always be reachable.
   function syncInert() {
     var isMobile = mqMobile.matches;
     var isOpen   = panel.classList.contains('global-nav__panel--open');
@@ -31,7 +28,7 @@
     openBtn.setAttribute('aria-expanded', 'true');
     document.body.classList.add('has-mobile-nav-open');
     syncInert();
-    var first = panel.querySelector('a, button');
+    var first = panel.querySelector('a, button, input');
     if (first) first.focus();
   }
   function close() {
@@ -52,14 +49,11 @@
     if (e.key === 'Escape' && panel.classList.contains('global-nav__panel--open')) close();
   });
 
-  // Re-evaluate when the viewport crosses the breakpoint so the panel
-  // becomes focusable again on resize from mobile → desktop and vice versa.
   if (mqMobile.addEventListener) {
     mqMobile.addEventListener('change', syncInert);
   } else if (mqMobile.addListener) {
     mqMobile.addListener(syncInert);
   }
 
-  // Initial state — off-canvas + closed = inert.
   syncInert();
 })();

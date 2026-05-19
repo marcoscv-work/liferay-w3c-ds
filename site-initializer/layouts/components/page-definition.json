@@ -7,12 +7,11 @@
                         "key": "w3c-hero"
                     },
                     "fragmentConfig": {
-                        "showIllustration": false,
-                        "isListing": true
+                        "isListing": true,
+                        "showIllustration": false
                     },
                     "fragmentFields": [
                         {
-                            "id": "hero-title",
                             "value": {
                                 "fragmentLink": {},
                                 "text": {
@@ -23,7 +22,6 @@
                             }
                         },
                         {
-                            "id": "hero-lead",
                             "value": {
                                 "fragmentLink": {},
                                 "text": {
@@ -55,7 +53,41 @@
                                 "key": "w3c-breadcrumb"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "/"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"
@@ -68,8 +100,14 @@
                     "cssClasses": [
                         "w3c-section--py-md"
                     ],
+                    "fragmentStyle": {
+                        "marginBottom": "5",
+                        "marginTop": "5"
+                    },
                     "indexed": true,
                     "layout": {
+                        "marginBottom": 4,
+                        "marginTop": 4,
                         "widthType": "Fixed"
                     }
                 },
@@ -77,14 +115,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -102,11 +139,37 @@
                     {
                         "definition": {
                             "gutters": true,
-                            "numberOfColumns": 3
+                            "indexed": true,
+                            "modulesPerRow": 3,
+                            "numberOfColumns": 3,
+                            "reverseOrder": false,
+                            "rowViewports": [
+                                {
+                                    "rowViewportDefinition": {}
+                                },
+                                {
+                                    "rowViewportDefinition": {}
+                                },
+                                {
+                                    "rowViewportDefinition": {}
+                                }
+                            ],
+                            "verticalAlignment": "top"
                         },
                         "pageElements": [
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 4
                                 },
                                 "pageElements": [
@@ -116,11 +179,12 @@
                                                 "key": "w3c-button"
                                             },
                                             "fragmentConfig": {
-                                                "variant": "primary"
+                                                "wide": false,
+                                                "variant": "primary",
+                                                "disabled": false
                                             },
                                             "fragmentFields": [
                                                 {
-                                                    "id": "btn-label",
                                                     "value": {
                                                         "fragmentLink": {},
                                                         "text": {
@@ -129,36 +193,14 @@
                                                             }
                                                         }
                                                     }
-                                                }
-                                            ],
-                                            "indexed": true
-                                        },
-                                        "type": "Fragment"
-                                    }
-                                ],
-                                "type": "Column"
-                            },
-                            {
-                                "definition": {
-                                    "size": 4
-                                },
-                                "pageElements": [
-                                    {
-                                        "definition": {
-                                            "fragment": {
-                                                "key": "w3c-button"
-                                            },
-                                            "fragmentConfig": {
-                                                "variant": "alt"
-                                            },
-                                            "fragmentFields": [
+                                                },
                                                 {
-                                                    "id": "btn-label",
                                                     "value": {
-                                                        "fragmentLink": {},
-                                                        "text": {
-                                                            "value_i18n": {
-                                                                "en_US": ".button--alt"
+                                                        "fragmentLink": {
+                                                            "value": {
+                                                                "href": {
+                                                                    "value": "#"
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -173,6 +215,17 @@
                             },
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 4
                                 },
                                 "pageElements": [
@@ -182,16 +235,84 @@
                                                 "key": "w3c-button"
                                             },
                                             "fragmentConfig": {
-                                                "variant": "ghost"
+                                                "wide": false,
+                                                "variant": "alt",
+                                                "disabled": false
                                             },
                                             "fragmentFields": [
                                                 {
-                                                    "id": "btn-label",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": ".button--alt"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {
+                                                            "value": {
+                                                                "href": {
+                                                                    "value": "#"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
+                                    "size": 4
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-button"
+                                            },
+                                            "fragmentConfig": {
+                                                "wide": false,
+                                                "variant": "ghost",
+                                                "disabled": false
+                                            },
+                                            "fragmentFields": [
+                                                {
                                                     "value": {
                                                         "fragmentLink": {},
                                                         "text": {
                                                             "value_i18n": {
                                                                 "en_US": ".button--ghost"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {
+                                                            "value": {
+                                                                "href": {
+                                                                    "value": "#"
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -215,8 +336,12 @@
                     "cssClasses": [
                         "w3c-section--py-md"
                     ],
+                    "fragmentStyle": {
+                        "marginBottom": "5"
+                    },
                     "indexed": true,
                     "layout": {
+                        "marginBottom": 4,
                         "widthType": "Fixed"
                     }
                 },
@@ -224,14 +349,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -249,11 +373,37 @@
                     {
                         "definition": {
                             "gutters": true,
-                            "numberOfColumns": 3
+                            "indexed": true,
+                            "modulesPerRow": 3,
+                            "numberOfColumns": 3,
+                            "reverseOrder": false,
+                            "rowViewports": [
+                                {
+                                    "rowViewportDefinition": {}
+                                },
+                                {
+                                    "rowViewportDefinition": {}
+                                },
+                                {
+                                    "rowViewportDefinition": {}
+                                }
+                            ],
+                            "verticalAlignment": "top"
                         },
                         "pageElements": [
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 4
                                 },
                                 "pageElements": [
@@ -264,12 +414,54 @@
                                             },
                                             "fragmentConfig": {
                                                 "modifier": "news",
-                                                "showImage": true,
-                                                "showHeading": true,
                                                 "showText": true,
-                                                "showLink": true
+                                                "showImage": true,
+                                                "showLink": true,
+                                                "showHeading": true
                                             },
-                                            "fragmentFields": [],
+                                            "fragmentFields": [
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentImage": {
+                                                            "url": {
+                                                                "value_i18n": {}
+                                                            }
+                                                        },
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {
+                                                            "value": {
+                                                                "href": {
+                                                                    "value": "#"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                }
+                                            ],
                                             "indexed": true
                                         },
                                         "type": "Fragment"
@@ -279,6 +471,17 @@
                             },
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 4
                                 },
                                 "pageElements": [
@@ -288,13 +491,45 @@
                                                 "key": "w3c-card"
                                             },
                                             "fragmentConfig": {
-                                                "modifier": "event",
-                                                "showImage": true,
-                                                "showHeading": true,
+                                                "modifier": "news",
                                                 "showText": true,
-                                                "showLink": true
+                                                "showImage": true,
+                                                "showLink": true,
+                                                "showHeading": true
                                             },
-                                            "fragmentFields": [],
+                                            "fragmentFields": [
+                                                {
+                                                    "value": {
+                                                        "fragmentImage": {
+                                                            "url": {
+                                                                "value_i18n": {}
+                                                            }
+                                                        },
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {
+                                                            "value": {
+                                                                "href": {
+                                                                    "value": "#"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                }
+                                            ],
                                             "indexed": true
                                         },
                                         "type": "Fragment"
@@ -304,6 +539,17 @@
                             },
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 4
                                 },
                                 "pageElements": [
@@ -314,12 +560,54 @@
                                             },
                                             "fragmentConfig": {
                                                 "modifier": "member",
-                                                "showImage": true,
-                                                "showHeading": true,
                                                 "showText": true,
-                                                "showLink": true
+                                                "showImage": true,
+                                                "showLink": true,
+                                                "showHeading": true
                                             },
-                                            "fragmentFields": [],
+                                            "fragmentFields": [
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentImage": {
+                                                            "url": {
+                                                                "value_i18n": {}
+                                                            }
+                                                        },
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {
+                                                            "value": {
+                                                                "href": {
+                                                                    "value": "#"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                }
+                                            ],
                                             "indexed": true
                                         },
                                         "type": "Fragment"
@@ -347,14 +635,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -379,7 +666,11 @@
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "note-heading",
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -404,7 +695,11 @@
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "note-heading",
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -429,7 +724,11 @@
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "note-heading",
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -454,7 +753,11 @@
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "note-heading",
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -477,8 +780,14 @@
                     "cssClasses": [
                         "w3c-section--py-md"
                     ],
+                    "fragmentStyle": {
+                        "marginBottom": "5",
+                        "marginTop": "4"
+                    },
                     "indexed": true,
                     "layout": {
+                        "marginBottom": 4,
+                        "marginTop": 2,
                         "widthType": "Fixed"
                     }
                 },
@@ -486,14 +795,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -514,7 +822,38 @@
                                 "key": "w3c-accordion"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"
@@ -527,8 +866,12 @@
                     "cssClasses": [
                         "w3c-section--py-md"
                     ],
+                    "fragmentStyle": {
+                        "marginBottom": "4"
+                    },
                     "indexed": true,
                     "layout": {
+                        "marginBottom": 2,
                         "widthType": "Fixed"
                     }
                 },
@@ -536,14 +879,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -564,7 +906,23 @@
                                 "key": "w3c-tabs"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"
@@ -577,8 +935,12 @@
                     "cssClasses": [
                         "w3c-section--py-md"
                     ],
+                    "fragmentStyle": {
+                        "marginBottom": "5"
+                    },
                     "indexed": true,
                     "layout": {
+                        "marginBottom": 4,
                         "widthType": "Fixed"
                     }
                 },
@@ -586,14 +948,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -614,7 +975,63 @@
                                 "key": "w3c-tag-list"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {
+                                            "value": {
+                                                "href": {
+                                                    "value": "#"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"
@@ -627,8 +1044,12 @@
                     "cssClasses": [
                         "w3c-section--py-md"
                     ],
+                    "fragmentStyle": {
+                        "marginBottom": "5"
+                    },
                     "indexed": true,
                     "layout": {
+                        "marginBottom": 4,
                         "widthType": "Fixed"
                     }
                 },
@@ -636,14 +1057,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -661,11 +1081,37 @@
                     {
                         "definition": {
                             "gutters": true,
-                            "numberOfColumns": 2
+                            "indexed": true,
+                            "modulesPerRow": 2,
+                            "numberOfColumns": 2,
+                            "reverseOrder": false,
+                            "rowViewports": [
+                                {
+                                    "rowViewportDefinition": {}
+                                },
+                                {
+                                    "rowViewportDefinition": {}
+                                },
+                                {
+                                    "rowViewportDefinition": {}
+                                }
+                            ],
+                            "verticalAlignment": "top"
                         },
                         "pageElements": [
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 6
                                 },
                                 "pageElements": [
@@ -675,11 +1121,22 @@
                                                 "key": "w3c-form-input"
                                             },
                                             "fragmentConfig": {
+                                                "showError": false,
                                                 "type": "text",
-                                                "showHint": true,
-                                                "showError": false
+                                                "showHint": true
                                             },
-                                            "fragmentFields": [],
+                                            "fragmentFields": [
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                }
+                                            ],
                                             "indexed": true
                                         },
                                         "type": "Fragment"
@@ -689,6 +1146,17 @@
                             },
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 6
                                 },
                                 "pageElements": [
@@ -698,29 +1166,27 @@
                                                 "key": "w3c-form-input"
                                             },
                                             "fragmentConfig": {
+                                                "showError": true,
                                                 "type": "email",
-                                                "showHint": false,
-                                                "showError": true
+                                                "showHint": false
                                             },
                                             "fragmentFields": [
                                                 {
-                                                    "id": "input-label",
-                                                    "value": {
-                                                        "fragmentLink": {},
-                                                        "text": {
-                                                            "value_i18n": {
-                                                                "en_US": "Email"
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "id": "input-error",
                                                     "value": {
                                                         "fragmentLink": {},
                                                         "text": {
                                                             "value_i18n": {
                                                                 "en_US": "Please enter a valid email."
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Email"
                                                             }
                                                         }
                                                     }
@@ -735,6 +1201,17 @@
                             },
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 6
                                 },
                                 "pageElements": [
@@ -744,7 +1221,13 @@
                                                 "key": "w3c-form-select"
                                             },
                                             "fragmentConfig": {},
-                                            "fragmentFields": [],
+                                            "fragmentFields": [
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                }
+                                            ],
                                             "indexed": true
                                         },
                                         "type": "Fragment"
@@ -754,6 +1237,17 @@
                             },
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 6
                                 },
                                 "pageElements": [
@@ -763,7 +1257,18 @@
                                                 "key": "w3c-form-textarea"
                                             },
                                             "fragmentConfig": {},
-                                            "fragmentFields": [],
+                                            "fragmentFields": [
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                }
+                                            ],
                                             "indexed": true
                                         },
                                         "type": "Fragment"
@@ -773,6 +1278,17 @@
                             },
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 6
                                 },
                                 "pageElements": [
@@ -782,7 +1298,18 @@
                                                 "key": "w3c-form-checkbox"
                                             },
                                             "fragmentConfig": {},
-                                            "fragmentFields": [],
+                                            "fragmentFields": [
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                },
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                }
+                                            ],
                                             "indexed": true
                                         },
                                         "type": "Fragment"
@@ -792,6 +1319,17 @@
                             },
                             {
                                 "definition": {
+                                    "columnViewports": [
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        },
+                                        {
+                                            "columnViewportDefinition": {}
+                                        }
+                                    ],
                                     "size": 6
                                 },
                                 "pageElements": [
@@ -801,7 +1339,13 @@
                                                 "key": "w3c-form-radio"
                                             },
                                             "fragmentConfig": {},
-                                            "fragmentFields": [],
+                                            "fragmentFields": [
+                                                {
+                                                    "value": {
+                                                        "fragmentLink": {}
+                                                    }
+                                                }
+                                            ],
                                             "indexed": true
                                         },
                                         "type": "Fragment"
@@ -820,8 +1364,12 @@
                     "cssClasses": [
                         "w3c-section--py-md"
                     ],
+                    "fragmentStyle": {
+                        "marginBottom": "5"
+                    },
                     "indexed": true,
                     "layout": {
+                        "marginBottom": 4,
                         "widthType": "Fixed"
                     }
                 },
@@ -829,14 +1377,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -879,14 +1426,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -907,7 +1453,18 @@
                                 "key": "w3c-quote"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"
@@ -920,8 +1477,12 @@
                     "cssClasses": [
                         "w3c-section--py-md"
                     ],
+                    "fragmentStyle": {
+                        "marginBottom": "5"
+                    },
                     "indexed": true,
                     "layout": {
+                        "marginBottom": 4,
                         "widthType": "Fixed"
                     }
                 },
@@ -929,14 +1490,13 @@
                     {
                         "definition": {
                             "fragment": {
-                                "key": "w3c-section-heading"
+                                "key": ""
                             },
                             "fragmentConfig": {
                                 "level": "h2"
                             },
                             "fragmentFields": [
                                 {
-                                    "id": "section-heading",
                                     "value": {
                                         "fragmentLink": {},
                                         "text": {
@@ -957,7 +1517,18 @@
                                 "key": "w3c-disclosure"
                             },
                             "fragmentConfig": {},
-                            "fragmentFields": [],
+                            "fragmentFields": [
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                },
+                                {
+                                    "value": {
+                                        "fragmentLink": {}
+                                    }
+                                }
+                            ],
                             "indexed": true
                         },
                         "type": "Fragment"

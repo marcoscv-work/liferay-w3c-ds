@@ -1,43 +1,71 @@
-/* W3C hero — l-sidebar layout: text + decorative SVG aside */
+/* W3C hero — verbatim from /dist/assets/styles/core.css.
+ * Background = mist-gray. Sidebar 31.25rem, not-sidebar min-width 50%. */
+
+.l-center {
+  box-sizing: border-box;
+  width: 100%;
+  margin-inline: auto;
+  max-width: 70rem;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+  .l-center { padding-inline: 1.5rem; }
+}
+
+.l-sidebar > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.u-full-width { max-width: 100%; }
+.lead { font-size: 1.4375rem; line-height: calc(33.6 / 24); }
 
 .hero {
-  padding-block: 2.5rem;
-  background-color: var(--w3c-white, #FFFFFF);
+  background-color: #F8F8FB;
+  padding-top: 2.875rem;
+  padding-bottom: 2.875rem;
+  font-family: var(--font-family-base, 'Noto Sans', 'Trebuchet MS', Geneva, sans-serif);
+  color: var(--w3c-off-black, #111);
 }
-
-.hero__inner {
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.hero__text {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-width: 60%;
-}
-.hero__text h1 { margin-top: 0; }
-
-.hero__illustration {
-  flex-basis: 240px;
+.hero .l-sidebar > *,
+.hero .l-sidebar > * > * { margin: 0; }
+.hero .l-sidebar .sidebar {
+  flex-basis: 31.25rem;
   flex-grow: 1;
-  max-width: 360px;
+  max-width: 31.25rem;
 }
-.hero__illustration-img {
+.hero .l-sidebar .sidebar img,
+.hero .l-sidebar .sidebar svg {
   display: block;
   width: 100%;
   height: auto;
 }
+.hero .l-sidebar .not-sidebar {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 50%;
+  padding-bottom: 1.875rem;
+}
+.hero .l-sidebar .not-sidebar > * { max-width: 31.5rem; }
 
-/* Listing variant — used on search/filter pages and section landing pages */
+.hero h1 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 2.0625rem;
+  line-height: calc(43 / 33);
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .hero h1 { font-size: 2.625rem; line-height: calc(58.8 / 42); }
+}
+
 .hero--listing {
-  background-color: var(--w3c-mist-gray, #F8F8FB);
-  padding-block: 1.5rem 1.5rem;
+  padding-block: 1.5rem;
   border-bottom: 1px solid var(--w3c-twiki-gray, #CAC9C9);
 }
 .hero--listing h1 {
-  font-size: var(--font-size-earth, 1.6875rem);
+  font-size: 1.6875rem;
   margin-bottom: 0.5em;
 }
-.hero--listing .lead {
-  font-size: var(--font-size-jupiter, 1.25rem);
-}
+.hero--listing .lead { font-size: 1.25rem; }
