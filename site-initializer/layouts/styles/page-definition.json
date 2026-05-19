@@ -1,0 +1,103 @@
+{
+    "pageElement": {
+        "pageElements": [
+            {
+                "definition": {
+                    "fragment": {
+                        "key": "w3c-hero"
+                    },
+                    "fragmentConfig": {
+                        "showIllustration": false,
+                        "isListing": true
+                    },
+                    "fragmentFields": [
+                        {
+                            "id": "hero-title",
+                            "value": {
+                                "fragmentLink": {},
+                                "text": {
+                                    "value_i18n": {
+                                        "en_US": "Styles"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "id": "hero-lead",
+                            "value": {
+                                "fragmentLink": {},
+                                "text": {
+                                    "value_i18n": {
+                                        "en_US": "Foundations of the W3C design system: colors, typography, and icons."
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "indexed": true
+                },
+                "type": "Fragment"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-xs"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-breadcrumb"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-styles-showcase"
+                            },
+                            "fragmentConfig": {
+                                "showColors": true,
+                                "showTypography": true,
+                                "showIcons": true
+                            },
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            }
+        ],
+        "type": "Root"
+    },
+    "settings": {
+        "masterPage": {
+            "key": "main"
+        }
+    }
+}

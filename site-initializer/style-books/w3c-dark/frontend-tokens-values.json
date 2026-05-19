@@ -1,0 +1,10 @@
+{
+    "w3cBlue":      {"cssVariableMapping": "w3c-blue",       "value": "#5C8EC9"},
+    "w3cDeepBlue":  {"cssVariableMapping": "w3c-deep-blue",  "value": "#9CC2F0"},
+    "w3cLightBlue": {"cssVariableMapping": "w3c-light-blue", "value": "#003E73"},
+    "w3cMistGray":  {"cssVariableMapping": "w3c-mist-gray",  "value": "#1C2028"},
+    "w3cTwikiGray": {"cssVariableMapping": "w3c-twiki-gray", "value": "#363D47"},
+    "w3cWhite":     {"cssVariableMapping": "w3c-white",      "value": "#111111"},
+    "w3cOffBlack":  {"cssVariableMapping": "w3c-off-black",  "value": "#FAFAFA"},
+    "w3cStormGray": {"cssVariableMapping": "w3c-storm-gray", "value": "#AAAAAA"}
+}

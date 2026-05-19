@@ -1,0 +1,54 @@
+/* W3C collapsible containers — disclosure pattern with native <details> */
+
+.collapsibles {
+  border-top: 1px solid var(--w3c-twiki-gray, #CAC9C9);
+}
+
+.collapsible {
+  border-bottom: 1px solid var(--w3c-twiki-gray, #CAC9C9);
+}
+
+.collapsible__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-jupiter, 1.25rem);
+  font-weight: var(--font-weight-emphasis, 600);
+  color: var(--w3c-off-black, #111);
+}
+.collapsible__summary::-webkit-details-marker { display: none; }
+.collapsible__summary::marker { content: ''; }
+
+.collapsible__summary:hover .collapsible__label {
+  color: var(--w3c-blue, #005A9C);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.collapsible__icon {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+.collapsible__icon::before,
+.collapsible__icon::after {
+  content: '';
+  position: absolute;
+  background-color: var(--w3c-blue, #005A9C);
+}
+.collapsible__icon::before { top: 50%; left: 0; right: 0; height: 2px; transform: translateY(-50%); }
+.collapsible__icon::after  { left: 50%; top: 0; bottom: 0; width: 2px; transform: translateX(-50%); transition: transform 0.15s ease; }
+.collapsible[open] .collapsible__icon::after { transform: translateX(-50%) scaleY(0); }
+
+.collapsible__content {
+  padding: 0 0 1rem;
+  max-width: var(--text-measure, 41.25rem);
+}
+.collapsible__content p { margin: 0 0 1rem; }
+.collapsible__content > :last-child { margin-bottom: 0; }

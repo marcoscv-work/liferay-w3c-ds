@@ -1,0 +1,9 @@
+w3c-theme:
+    name: W3C Theme
+    type: themeCSS
+    mainURL: index.css
+    frontendTokenDefinitionJSON: frontend-token-definition.json
+
+assemble:
+    - from: src
+      into: static

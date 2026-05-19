@@ -1,0 +1,14 @@
+{
+    "w3cBlue":       {"cssVariableMapping": "w3c-blue",       "value": "#005A9C"},
+    "w3cDeepBlue":   {"cssVariableMapping": "w3c-deep-blue",  "value": "#002A56"},
+    "w3cLightBlue":  {"cssVariableMapping": "w3c-light-blue", "value": "#CBE0FB"},
+    "w3cYellow":     {"cssVariableMapping": "w3c-yellow",     "value": "#F9DC4A"},
+    "w3cPurple":     {"cssVariableMapping": "w3c-purple",     "value": "#75336C"},
+    "w3cCoral":      {"cssVariableMapping": "w3c-coral",      "value": "#FC7750"},
+    "w3cWhite":      {"cssVariableMapping": "w3c-white",      "value": "#FFFFFF"},
+    "w3cMistGray":   {"cssVariableMapping": "w3c-mist-gray",  "value": "#F8F8FB"},
+    "w3cTwikiGray":  {"cssVariableMapping": "w3c-twiki-gray", "value": "#CAC9C9"},
+    "w3cStormGray":  {"cssVariableMapping": "w3c-storm-gray", "value": "#545454"},
+    "w3cOffBlack":   {"cssVariableMapping": "w3c-off-black",  "value": "#111111"},
+    "fontFamilyBase":{"cssVariableMapping": "font-family-base","value": "'Noto Sans', 'Trebuchet MS', Geneva, sans-serif"}
+}

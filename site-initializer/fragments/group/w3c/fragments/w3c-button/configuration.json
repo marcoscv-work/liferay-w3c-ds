@@ -1,0 +1,25 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "primary",
+          "label": "Variant",
+          "name": "variant",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "primary", "label": ".button (primary, filled W3C blue)"},
+              {"value": "alt",     "label": ".button--alt (outline)"},
+              {"value": "ghost",   "label": ".button--ghost (no chrome)"}
+            ]
+          }
+        },
+        {"defaultValue": "false", "label": "Wide (.button--wide)", "name": "wide",     "type": "checkbox"},
+        {"defaultValue": "false", "label": "Disabled",             "name": "disabled", "type": "checkbox"}
+      ],
+      "label": "Button"
+    }
+  ]
+}

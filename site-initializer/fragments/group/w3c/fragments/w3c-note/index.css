@@ -1,0 +1,21 @@
+/* W3C notes — callout boxes (faithful to /components/notes.html) */
+
+.note {
+  border-left: 4px solid var(--w3c-blue, #005A9C);
+  background-color: var(--w3c-mist-gray, #F8F8FB);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.note__heading {
+  font-weight: var(--font-weight-emphasis, 600);
+  margin: 0 0 0.5rem;
+}
+
+.note__body p { margin: 0; }
+.note__body p + p { margin-top: 0.5rem; }
+
+.note--info    { border-left-color: var(--w3c-blue, #005A9C); }
+.note--success { border-left-color: var(--w3c-success, #046704); }
+.note--warning { border-left-color: var(--w3c-warning, #C28605); background-color: #FDF6E5; }
+.note--error   { border-left-color: var(--w3c-error, #A82615); background-color: #FCEFED; }

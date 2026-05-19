@@ -1,0 +1,21 @@
+/* W3C "You may also like" — 3-card row */
+
+.crosslinks {
+  background-color: var(--w3c-mist-gray, #F8F8FB);
+  padding-block: 2.5rem;
+  border-top: 1px solid var(--w3c-twiki-gray, #CAC9C9);
+}
+
+.crosslinks__heading {
+  font-size: var(--font-size-mars, 1.5rem);
+  margin: 0 0 1.5rem;
+}
+
+.crosslinks__list { gap: 1.5rem; }
+
+.crosslinks .card__heading a:focus,
+.crosslinks .card__heading a:focus-visible {
+  background-color: var(--w3c-yellow, #F9DC4A);
+  color: var(--w3c-black, #000);
+  text-decoration: none;
+}

@@ -1,0 +1,29 @@
+/* W3C disclosure-button — inline reveal */
+
+.disclosure { margin: 1rem 0; }
+
+.disclosure__summary {
+  list-style: none;
+  cursor: pointer;
+  color: var(--w3c-blue, #005A9C);
+  font-weight: var(--font-weight-emphasis, 600);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.disclosure__summary::-webkit-details-marker { display: none; }
+.disclosure__summary::after {
+  content: "▾";
+  font-size: 0.75em;
+  transition: transform 0.15s ease;
+}
+.disclosure[open] .disclosure__summary::after { transform: rotate(180deg); }
+
+.disclosure__content {
+  margin-top: 0.75rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--w3c-twiki-gray, #CAC9C9);
+}
+.disclosure__content p { margin: 0 0 0.5rem; }

@@ -1,0 +1,49 @@
+/* W3C pagination */
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-eris, 0.875rem);
+}
+
+.pagination a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  padding: 0 0.625rem;
+  color: var(--w3c-blue, #005A9C);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  background-color: transparent;
+}
+
+.pagination a[aria-current="page"] {
+  background-color: var(--w3c-blue, #005A9C);
+  color: var(--w3c-white, #FFFFFF);
+  text-decoration: none;
+  font-weight: var(--font-weight-emphasis, 600);
+  border-radius: 50rem;
+  background-image: none;
+  box-shadow: none;
+}
+
+/* W3C focus pattern always wins, even on the current page chip */
+.pagination a:focus,
+.pagination a:focus-visible {
+  outline: 0;
+  background-color: var(--w3c-yellow, #F9DC4A) !important;
+  background-image: none !important;
+  color: var(--w3c-black, #000) !important;
+  text-decoration: none;
+  border-radius: 0;
+  box-shadow: 0 3px 0 var(--w3c-black, #000);
+}
+
+.pagination__prev a,
+.pagination__next a { font-weight: var(--font-weight-emphasis, 600); }
+
+.pagination__gap { color: var(--w3c-storm-gray, #545454); padding: 0 0.25rem; }

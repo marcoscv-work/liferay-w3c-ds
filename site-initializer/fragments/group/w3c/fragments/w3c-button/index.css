@@ -1,0 +1,92 @@
+/* W3C buttons — faithful to 30-base/_buttons.scss */
+
+.button {
+  display: inline-block;
+  background-color: var(--w3c-blue, #005A9C);
+  border: solid 2px var(--w3c-blue, #005A9C);
+  border-radius: var(--radius-button, 1.5rem);
+  color: var(--w3c-white, #FFFFFF);
+  font-family: var(--font-family-base);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-emphasis, 600);
+  line-height: 1.5;
+  padding: 0.6875rem 1.5rem;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  cursor: pointer;
+}
+.button:visited { color: var(--w3c-white, #FFFFFF); }
+.button:hover {
+  background-color: var(--w3c-deep-blue, #002A56);
+  border-color: var(--w3c-deep-blue, #002A56);
+  color: var(--w3c-white, #FFFFFF);
+  text-decoration: none;
+}
+.button:focus,
+.button:active {
+  background-color: var(--w3c-yellow, #F9DC4A);
+  border-color: var(--w3c-black, #000);
+  color: var(--w3c-black, #000);
+  text-decoration: none;
+  background-image: none;
+  box-shadow: none;
+}
+
+/* --- .button--alt (outline) --- */
+.button.button--alt {
+  background-color: transparent;
+  color: var(--w3c-blue, #005A9C);
+}
+.button.button--alt:visited { color: var(--w3c-blue, #005A9C); }
+.button.button--alt:hover {
+  background-color: var(--w3c-light-blue, #CBE0FB);
+  color: var(--w3c-deep-blue, #002A56);
+  border-color: var(--w3c-blue, #005A9C);
+}
+.button.button--alt:focus,
+.button.button--alt:active {
+  background-color: var(--w3c-yellow, #F9DC4A);
+  border-color: var(--w3c-black, #000);
+  border-width: 3px;
+  color: var(--w3c-black, #000);
+  padding: 0.625rem 1.4375rem;
+}
+
+/* --- .button--ghost (no chrome) --- */
+.button.button--ghost {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  color: var(--w3c-black, #000);
+  font-weight: var(--font-weight-normal, 400);
+  padding-inline: 0;
+}
+.button.button--ghost:visited { color: var(--w3c-black, #000); }
+.button.button--ghost:hover {
+  color: var(--w3c-deep-blue, #002A56);
+  text-decoration: underline;
+}
+.button.button--ghost:focus,
+.button.button--ghost:active {
+  background-color: var(--w3c-yellow, #F9DC4A);
+  color: var(--w3c-black, #000);
+}
+
+/* --- wide --- */
+.button.button--wide {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+/* --- disabled --- */
+.button[aria-disabled="true"],
+.button[aria-disabled="true"]:hover,
+.button[aria-disabled="true"]:focus {
+  background-color: var(--w3c-twiki-gray, #CAC9C9);
+  border-color: var(--w3c-twiki-gray, #CAC9C9);
+  color: #303030;
+  cursor: not-allowed;
+  pointer-events: none;
+}

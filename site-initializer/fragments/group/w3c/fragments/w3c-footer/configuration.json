@@ -1,0 +1,10 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {"defaultValue": "true", "label": "Show social links", "name": "showSocial", "type": "checkbox"}
+      ],
+      "label": "Footer"
+    }
+  ]
+}

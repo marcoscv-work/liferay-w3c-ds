@@ -1,0 +1,47 @@
+/* W3C global-footer */
+
+.global-footer {
+  border-top: 1px solid var(--w3c-twiki-gray, #CAC9C9);
+  padding: 1.25rem 0 1.5625rem;
+  font-size: var(--font-size-eris, 0.875rem);
+}
+
+.global-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.global-footer__links > .clean-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.global-footer__social {
+  display: flex;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+.global-footer__social a {
+  padding: 0.375rem;
+  background: transparent;
+}
+.global-footer__social a:hover { background: transparent; }
+
+.global-footer a {
+  color: var(--w3c-off-black, #111);
+}
+.global-footer a:visited,
+.global-footer a:hover {
+  color: var(--w3c-off-black, #111);
+}
+
+.copyright {
+  margin: 0;
+  line-height: 1.5;
+}
+.copyright a { color: var(--w3c-blue, #005A9C); }

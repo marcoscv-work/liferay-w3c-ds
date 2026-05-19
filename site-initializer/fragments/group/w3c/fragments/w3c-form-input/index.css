@@ -1,0 +1,46 @@
+/* W3C form field — label above, hint under label, input below, error pattern */
+
+.form-field {
+  margin-bottom: 1.5rem;
+  max-width: var(--text-measure, 41.25rem);
+}
+
+.form-field__label {
+  display: block;
+  font-weight: var(--font-weight-emphasis, 600);
+  margin-bottom: 0.25rem;
+}
+
+.form-field__hint {
+  margin: 0 0 0.5rem;
+  color: var(--w3c-storm-gray, #545454);
+  font-size: var(--font-size-eris, 0.875rem);
+}
+
+.form-field__error {
+  margin: 0 0 0.5rem;
+  color: var(--w3c-error, #A82615);
+  font-weight: var(--font-weight-emphasis, 600);
+}
+
+.form-field__input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--w3c-off-black, #111);
+  background-color: var(--w3c-white, #FFFFFF);
+  border: 2px solid var(--w3c-storm-gray, #545454);
+  border-radius: 0;
+}
+.form-field__input:focus {
+  outline: 3px solid var(--w3c-yellow, #F9DC4A);
+  outline-offset: 0;
+  border-color: var(--w3c-off-black, #111);
+}
+
+.form-field--error .form-field__input {
+  border-color: var(--w3c-error, #A82615);
+  border-width: 3px;
+}

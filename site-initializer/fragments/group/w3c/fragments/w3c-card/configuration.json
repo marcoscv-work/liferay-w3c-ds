@@ -1,0 +1,29 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "",
+          "label": "Modifier",
+          "name": "modifier",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "",         "label": "None (simple .card)"},
+              {"value": "news",     "label": ".card--news"},
+              {"value": "event",    "label": ".card--event"},
+              {"value": "member",   "label": ".card--member"},
+              {"value": "group",    "label": ".card--group"}
+            ]
+          }
+        },
+        {"defaultValue": "true", "label": "Show image",   "name": "showImage",  "type": "checkbox"},
+        {"defaultValue": "true", "label": "Show heading", "name": "showHeading","type": "checkbox"},
+        {"defaultValue": "true", "label": "Show text",    "name": "showText",   "type": "checkbox"},
+        {"defaultValue": "true", "label": "Show link",    "name": "showLink",   "type": "checkbox"}
+      ],
+      "label": "Card"
+    }
+  ]
+}

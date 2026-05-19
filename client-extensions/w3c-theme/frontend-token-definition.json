@@ -1,0 +1,88 @@
+{
+    "frontendTokenCategories": [
+        {
+            "label": "Theme colors",
+            "name": "themeColors",
+            "frontendTokenSets": [
+                {
+                    "label": "Brand",
+                    "name": "brand",
+                    "frontendTokens": [
+                        {"defaultValue": "#005A9C", "editorType": "ColorPicker", "label": "W3C blue",       "mappings": [{"type": "cssVariable", "value": "w3c-blue"}],       "name": "w3cBlue",       "type": "String"},
+                        {"defaultValue": "#002A56", "editorType": "ColorPicker", "label": "Deep blue",      "mappings": [{"type": "cssVariable", "value": "w3c-deep-blue"}],  "name": "w3cDeepBlue",   "type": "String"},
+                        {"defaultValue": "#CBE0FB", "editorType": "ColorPicker", "label": "Light blue",     "mappings": [{"type": "cssVariable", "value": "w3c-light-blue"}], "name": "w3cLightBlue",  "type": "String"},
+                        {"defaultValue": "#F9DC4A", "editorType": "ColorPicker", "label": "Yellow (focus)", "mappings": [{"type": "cssVariable", "value": "w3c-yellow"}],     "name": "w3cYellow",     "type": "String"},
+                        {"defaultValue": "#75336C", "editorType": "ColorPicker", "label": "Purple (visited)","mappings": [{"type": "cssVariable", "value": "w3c-purple"}],    "name": "w3cPurple",     "type": "String"},
+                        {"defaultValue": "#FC7750", "editorType": "ColorPicker", "label": "Coral (accent)", "mappings": [{"type": "cssVariable", "value": "w3c-coral"}],     "name": "w3cCoral",      "type": "String"}
+                    ]
+                },
+                {
+                    "label": "Neutrals",
+                    "name": "neutrals",
+                    "frontendTokens": [
+                        {"defaultValue": "#FFFFFF", "editorType": "ColorPicker", "label": "White",       "mappings": [{"type": "cssVariable", "value": "w3c-white"}],        "name": "w3cWhite",       "type": "String"},
+                        {"defaultValue": "#FAFAFA", "editorType": "ColorPicker", "label": "Off-white",   "mappings": [{"type": "cssVariable", "value": "w3c-off-white"}],    "name": "w3cOffWhite",    "type": "String"},
+                        {"defaultValue": "#F8F8FB", "editorType": "ColorPicker", "label": "Mist gray",   "mappings": [{"type": "cssVariable", "value": "w3c-mist-gray"}],    "name": "w3cMistGray",    "type": "String"},
+                        {"defaultValue": "#E5E5E5", "editorType": "ColorPicker", "label": "Mercury",     "mappings": [{"type": "cssVariable", "value": "w3c-mercury-grey"}], "name": "w3cMercuryGrey", "type": "String"},
+                        {"defaultValue": "#CAC9C9", "editorType": "ColorPicker", "label": "Twiki gray",  "mappings": [{"type": "cssVariable", "value": "w3c-twiki-gray"}],   "name": "w3cTwikiGray",   "type": "String"},
+                        {"defaultValue": "#AAAAAA", "editorType": "ColorPicker", "label": "Gray",        "mappings": [{"type": "cssVariable", "value": "w3c-grey"}],         "name": "w3cGrey",        "type": "String"},
+                        {"defaultValue": "#545454", "editorType": "ColorPicker", "label": "Storm gray",  "mappings": [{"type": "cssVariable", "value": "w3c-storm-gray"}],   "name": "w3cStormGray",   "type": "String"},
+                        {"defaultValue": "#111111", "editorType": "ColorPicker", "label": "Off-black",   "mappings": [{"type": "cssVariable", "value": "w3c-off-black"}],    "name": "w3cOffBlack",    "type": "String"}
+                    ]
+                },
+                {
+                    "label": "Feedback",
+                    "name": "feedback",
+                    "frontendTokens": [
+                        {"defaultValue": "#046704", "editorType": "ColorPicker", "label": "Success", "mappings": [{"type": "cssVariable", "value": "w3c-success"}], "name": "w3cSuccess", "type": "String"},
+                        {"defaultValue": "#A82615", "editorType": "ColorPicker", "label": "Error",   "mappings": [{"type": "cssVariable", "value": "w3c-error"}],   "name": "w3cError",   "type": "String"},
+                        {"defaultValue": "#C28605", "editorType": "ColorPicker", "label": "Warning", "mappings": [{"type": "cssVariable", "value": "w3c-warning"}], "name": "w3cWarning", "type": "String"},
+                        {"defaultValue": "#002A56", "editorType": "ColorPicker", "label": "Info",    "mappings": [{"type": "cssVariable", "value": "w3c-info"}],    "name": "w3cInfo",    "type": "String"}
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Typography",
+            "name": "typography",
+            "frontendTokenSets": [
+                {
+                    "label": "Families",
+                    "name": "fontFamily",
+                    "frontendTokens": [
+                        {"defaultValue": "'Noto Sans', 'Trebuchet MS', Geneva, sans-serif", "label": "Font Family Base", "mappings": [{"type": "cssVariable", "value": "font-family-base"}], "name": "fontFamilyBase", "type": "String"},
+                        {"defaultValue": "Monaco, 'Lucida Console', 'Courier New', monospace", "label": "Font Family Mono", "mappings": [{"type": "cssVariable", "value": "font-family-mono"}], "name": "fontFamilyMono", "type": "String"}
+                    ]
+                },
+                {
+                    "label": "Sizes (planet scale)",
+                    "name": "fontSizes",
+                    "frontendTokens": [
+                        {"defaultValue": "2.0625rem", "editorType": "Length", "label": ".txt-venus (h1)",  "mappings": [{"type": "cssVariable", "value": "font-size-venus"}],   "name": "fontSizeVenus",   "type": "String"},
+                        {"defaultValue": "1.6875rem", "editorType": "Length", "label": ".txt-earth (h2)",  "mappings": [{"type": "cssVariable", "value": "font-size-earth"}],   "name": "fontSizeEarth",   "type": "String"},
+                        {"defaultValue": "1.5rem",    "editorType": "Length", "label": ".txt-mars (h3)",   "mappings": [{"type": "cssVariable", "value": "font-size-mars"}],    "name": "fontSizeMars",    "type": "String"},
+                        {"defaultValue": "1.25rem",   "editorType": "Length", "label": ".txt-jupiter (h4)","mappings": [{"type": "cssVariable", "value": "font-size-jupiter"}], "name": "fontSizeJupiter", "type": "String"},
+                        {"defaultValue": "1.125rem",  "editorType": "Length", "label": ".txt-saturn (h5)", "mappings": [{"type": "cssVariable", "value": "font-size-saturn"}],  "name": "fontSizeSaturn",  "type": "String"},
+                        {"defaultValue": "1rem",      "editorType": "Length", "label": "Body",             "mappings": [{"type": "cssVariable", "value": "font-size-body"}],    "name": "fontSizeBody",    "type": "String"},
+                        {"defaultValue": "0.875rem",  "editorType": "Length", "label": ".txt-eris (small)","mappings": [{"type": "cssVariable", "value": "font-size-small"}],   "name": "fontSizeSmall",   "type": "String"},
+                        {"defaultValue": "1.4375rem", "editorType": "Length", "label": ".lead",            "mappings": [{"type": "cssVariable", "value": "font-size-lead"}],    "name": "fontSizeLead",    "type": "String"}
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Layout",
+            "name": "layout",
+            "frontendTokenSets": [
+                {
+                    "label": "Container",
+                    "name": "container",
+                    "frontendTokens": [
+                        {"defaultValue": "70rem", "editorType": "Length", "label": "Max width (1120px)", "mappings": [{"type": "cssVariable", "value": "max-width"}], "name": "maxWidth", "type": "String"},
+                        {"defaultValue": "1.5rem", "editorType": "Length", "label": "Button radius",     "mappings": [{"type": "cssVariable", "value": "radius-button"}], "name": "radiusButton", "type": "String"}
+                    ]
+                }
+            ]
+        }
+    ]
+}

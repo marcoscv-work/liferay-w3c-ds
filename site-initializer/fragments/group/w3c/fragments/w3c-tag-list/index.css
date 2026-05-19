@@ -1,0 +1,24 @@
+/* W3C tags — pill chips */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--w3c-mist-gray, #F8F8FB);
+  border: 1px solid var(--w3c-twiki-gray, #CAC9C9);
+  border-radius: 50rem;
+  color: var(--w3c-off-black, #111);
+  text-decoration: none;
+  font-size: var(--font-size-eris, 0.875rem);
+}
+.tag:visited { color: var(--w3c-off-black, #111); }
+.tag:hover {
+  background-color: var(--w3c-light-blue, #CBE0FB);
+  border-color: var(--w3c-blue, #005A9C);
+  color: var(--w3c-deep-blue, #002A56);
+}

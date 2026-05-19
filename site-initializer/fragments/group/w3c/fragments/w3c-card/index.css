@@ -1,0 +1,65 @@
+/* W3C cards — faithful to /components/cards.html */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--w3c-white, #FFFFFF);
+  border: 1px solid var(--w3c-twiki-gray, #CAC9C9);
+  position: relative;
+  height: 100%;
+}
+
+.card__image {
+  margin: 0;
+  overflow: hidden;
+  background: var(--w3c-mist-gray, #F8F8FB);
+}
+.card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.card__text {
+  padding: 1.25rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card__heading {
+  font-size: var(--font-size-jupiter, 1.25rem);
+  line-height: calc(32 / 20);
+  margin: 0 0 0.5rem;
+}
+.card__heading a {
+  color: var(--w3c-off-black, #111);
+  text-decoration: none;
+  padding-inline: 0;
+}
+.card__heading a:hover {
+  color: var(--w3c-blue, #005A9C);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+.card__heading a:visited {
+  color: var(--w3c-off-black, #111);
+}
+
+.card__text p {
+  margin: 0 0 1rem;
+  color: var(--w3c-storm-gray, #545454);
+}
+
+.card__link {
+  margin-top: auto;
+  font-weight: var(--font-weight-emphasis, 600);
+}
+
+/* Modifier accent strips (top border) */
+.card--event  { border-top: 4px solid var(--w3c-coral, #FC7750); }
+.card--member { border-top: 4px solid var(--w3c-blue, #005A9C); }
+.card--news   { border-top: 4px solid var(--w3c-deep-blue, #002A56); }
+.card--group  { border-top: 4px solid var(--w3c-yellow, #F9DC4A); }

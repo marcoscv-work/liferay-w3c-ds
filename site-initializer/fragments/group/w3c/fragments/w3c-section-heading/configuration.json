@@ -1,0 +1,23 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "h2",
+          "label": "Level",
+          "name": "level",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "h2", "label": "H2 (.txt-earth)"},
+              {"value": "h3", "label": "H3 (.txt-mars)"},
+              {"value": "h4", "label": "H4 (.txt-jupiter)"}
+            ]
+          }
+        }
+      ],
+      "label": "Section heading"
+    }
+  ]
+}

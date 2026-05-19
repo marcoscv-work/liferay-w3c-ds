@@ -1,0 +1,31 @@
+{
+    "pageElement": {
+        "pageElements": [
+            {
+                "definition": {
+                    "fragment": {"key": "w3c-header"},
+                    "fragmentConfig": {},
+                    "fragmentFields": [],
+                    "indexed": true
+                },
+                "type": "Fragment"
+            },
+            {
+                "definition": {
+                    "fragmentSettings": {"unallowedFragments": []}
+                },
+                "type": "DropZone"
+            },
+            {
+                "definition": {
+                    "fragment": {"key": "w3c-footer"},
+                    "fragmentConfig": {},
+                    "fragmentFields": [],
+                    "indexed": true
+                },
+                "type": "Fragment"
+            }
+        ],
+        "type": "Root"
+    }
+}

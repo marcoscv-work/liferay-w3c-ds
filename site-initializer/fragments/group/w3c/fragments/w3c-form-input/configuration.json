@@ -1,0 +1,19 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {"dataType": "string", "defaultValue": "text", "label": "Type", "name": "type", "type": "select",
+         "typeOptions": {"validValues": [
+           {"value": "text",  "label": "text"},
+           {"value": "email", "label": "email"},
+           {"value": "tel",   "label": "tel"},
+           {"value": "url",   "label": "url"},
+           {"value": "search","label": "search"}
+         ]}},
+        {"defaultValue": "true",  "label": "Show hint",  "name": "showHint",  "type": "checkbox"},
+        {"defaultValue": "false", "label": "Show error", "name": "showError", "type": "checkbox"}
+      ],
+      "label": "Text input"
+    }
+  ]
+}

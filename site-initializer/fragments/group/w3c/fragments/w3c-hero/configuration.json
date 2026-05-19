@@ -1,0 +1,11 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {"defaultValue": "true",  "label": "Show decorative illustration", "name": "showIllustration", "type": "checkbox"},
+        {"defaultValue": "false", "label": "Listing variant (hero--listing)", "name": "isListing",     "type": "checkbox"}
+      ],
+      "label": "Hero"
+    }
+  ]
+}

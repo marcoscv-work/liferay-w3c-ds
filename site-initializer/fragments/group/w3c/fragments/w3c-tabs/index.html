@@ -1,0 +1,17 @@
+<div class="tabs" data-tabs>
+  <div role="tablist" class="tabs__list">
+    <button role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true"  tabindex="0"  class="tabs__tab">Overview</button>
+    <button role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1" class="tabs__tab">Details</button>
+    <button role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1" class="tabs__tab">Resources</button>
+  </div>
+
+  <div role="tabpanel" id="panel-1" aria-labelledby="tab-1" class="tabs__panel" tabindex="0">
+    <p data-lfr-editable-id="panel-1-content" data-lfr-editable-type="rich-text">Overview panel content. Place the most relevant information first.</p>
+  </div>
+  <div role="tabpanel" id="panel-2" aria-labelledby="tab-2" class="tabs__panel" tabindex="0" hidden>
+    <p data-lfr-editable-id="panel-2-content" data-lfr-editable-type="rich-text">Details panel content with additional specifics.</p>
+  </div>
+  <div role="tabpanel" id="panel-3" aria-labelledby="tab-3" class="tabs__panel" tabindex="0" hidden>
+    <p data-lfr-editable-id="panel-3-content" data-lfr-editable-type="rich-text">Resources panel — links and further reading.</p>
+  </div>
+</div>

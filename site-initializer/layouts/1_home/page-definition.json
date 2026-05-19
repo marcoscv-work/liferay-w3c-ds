@@ -1,0 +1,396 @@
+{
+    "pageElement": {
+        "pageElements": [
+            {
+                "definition": {
+                    "fragment": {
+                        "key": "w3c-hero"
+                    },
+                    "fragmentConfig": {
+                        "showIllustration": true,
+                        "isListing": false
+                    },
+                    "fragmentFields": [
+                        {
+                            "id": "hero-title",
+                            "value": {
+                                "fragmentLink": {},
+                                "text": {
+                                    "value_i18n": {
+                                        "en_US": "W3C Mission"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "id": "hero-lead",
+                            "value": {
+                                "fragmentLink": {},
+                                "text": {
+                                    "value_i18n": {
+                                        "en_US": "The W3C mission is to lead the World Wide Web to its full potential by developing protocols and guidelines that ensure the long-term growth of the Web."
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "indexed": true
+                },
+                "type": "Fragment"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-xs"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-breadcrumb"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-quote"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Latest news"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "gutters": true,
+                            "numberOfColumns": 3
+                        },
+                        "pageElements": [
+                            {
+                                "definition": {
+                                    "size": 4
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-card"
+                                            },
+                                            "fragmentConfig": {
+                                                "modifier": "news",
+                                                "showImage": true,
+                                                "showHeading": true,
+                                                "showText": true,
+                                                "showLink": true
+                                            },
+                                            "fragmentFields": [
+                                                {
+                                                    "id": "card-heading",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "W3C starts web payments standards work"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "id": "card-text",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "A new working group at W3C will standardize the way merchants and customers exchange information on the Web."
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "id": "card-link-text",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Read more"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 4
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-card"
+                                            },
+                                            "fragmentConfig": {
+                                                "modifier": "news",
+                                                "showImage": true,
+                                                "showHeading": true,
+                                                "showText": true,
+                                                "showLink": true
+                                            },
+                                            "fragmentFields": [
+                                                {
+                                                    "id": "card-heading",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Work begins on extensions to WCAG 2.0"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "id": "card-text",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Extensions will help authors meet accessibility needs of people with cognitive, learning and low-vision disabilities."
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "id": "card-link-text",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Read more"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 4
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-card"
+                                            },
+                                            "fragmentConfig": {
+                                                "modifier": "news",
+                                                "showImage": true,
+                                                "showHeading": true,
+                                                "showText": true,
+                                                "showLink": true
+                                            },
+                                            "fragmentFields": [
+                                                {
+                                                    "id": "card-heading",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Contributions to ISOC report on mobile internet"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "id": "card-text",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "W3C contributes its perspective on the long-term role of the Web in mobile communications."
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "id": "card-link-text",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Read more"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            }
+                        ],
+                        "type": "Row"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Frequently asked questions"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-accordion"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fluid"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-crosslinks"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            }
+        ],
+        "type": "Root"
+    },
+    "settings": {
+        "masterPage": {
+            "key": "main"
+        }
+    }
+}

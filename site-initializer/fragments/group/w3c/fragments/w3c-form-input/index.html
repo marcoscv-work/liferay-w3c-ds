@@ -1,0 +1,18 @@
+<div class="form-field ${configuration.showError?then('form-field--error', '')}">
+  <label class="form-field__label" for="w3c-input-1" data-lfr-editable-id="input-label" data-lfr-editable-type="text">Full name</label>
+  [#if configuration.showHint]
+    <p class="form-field__hint" id="w3c-input-1-hint" data-lfr-editable-id="input-hint" data-lfr-editable-type="text">As shown on your government-issued ID.</p>
+  [/#if]
+  [#if configuration.showError]
+    <p class="form-field__error" id="w3c-input-1-error">
+      <span class="visuallyhidden">Error: </span>
+      <span data-lfr-editable-id="input-error" data-lfr-editable-type="text">This field is required.</span>
+    </p>
+  [/#if]
+  <input
+    class="form-field__input"
+    id="w3c-input-1"
+    type="${configuration.type!'text'}"
+    aria-describedby="${configuration.showHint?then('w3c-input-1-hint', '')} ${configuration.showError?then('w3c-input-1-error', '')}"
+  />
+</div>

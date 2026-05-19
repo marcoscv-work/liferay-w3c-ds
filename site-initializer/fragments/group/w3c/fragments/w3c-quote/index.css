@@ -1,0 +1,25 @@
+/* W3C blockquote */
+
+.quote {
+  margin: 1.5rem 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 4px solid var(--w3c-blue, #005A9C);
+  max-width: var(--text-measure, 41.25rem);
+}
+
+.quote__body {
+  margin: 0;
+  font-size: var(--font-size-jupiter, 1.25rem);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.quote__body p { margin: 0; }
+
+.quote__attribution {
+  margin-top: 0.75rem;
+  font-size: var(--font-size-eris, 0.875rem);
+  color: var(--w3c-storm-gray, #545454);
+  font-style: normal;
+}
+.quote__attribution::before { content: "— "; }

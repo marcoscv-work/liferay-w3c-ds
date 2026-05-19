@@ -1,0 +1,82 @@
+<header class="global-header" data-w3c-header>
+  <span role="status" aria-live="polite"></span>
+
+  [#if configuration.showBanner]
+    <div class="banner">
+      <div class="banner__inner l-center">
+        <p data-lfr-editable-id="banner-text" data-lfr-editable-type="rich-text">
+          This is a new website. <a href="https://github.com/w3c/w3c-website">Give feedback</a> to help us improve it.
+        </p>
+      </div>
+    </div>
+  [/#if]
+
+  [#if configuration.showLang]
+    <nav id="lang-nav" aria-label="Language options">
+      <div class="l-center">
+        <div class="l-cluster lang-nav__cluster">
+          <ul class="clean-list" role="list">
+            <li><a hreflang="ja" lang="ja" href="#" data-lfr-editable-id="lang-ja" data-lfr-editable-type="link">日本語ホームページ<span class="visuallyhidden" lang="en"> (Japanese website)</span></a></li>
+            <li><a hreflang="zh-hans" lang="zh-hans" href="#" data-lfr-editable-id="lang-zh" data-lfr-editable-type="link">简体中文首页<span class="visuallyhidden" lang="en"> (Chinese website)</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  [/#if]
+
+  <nav id="global-nav" aria-label="Main">
+    <div class="global-nav__inner l-center">
+      <a class="logo-link" href="/" data-lfr-editable-id="logo-link" data-lfr-editable-type="link">
+        <span class="logo">
+          <img src="[resources:logo-w3c.svg]" alt="W3C" role="img"/>
+        </span>
+        <span class="visuallyhidden">W3C homepage</span>
+      </a>
+
+      <button
+        type="button"
+        class="global-nav__mobile-toggle"
+        data-trigger="mobile-nav"
+        aria-controls="global-nav-list"
+        aria-expanded="false"
+      >
+        <span class="global-nav__mobile-toggle-icon" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="global-nav__mobile-toggle-label">Menu</span>
+      </button>
+
+      <div class="global-nav__panel" id="global-nav-list">
+        <button type="button" class="global-nav__close" data-trigger="mobile-nav-close" aria-label="Close menu">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <ul class="clean-list global-nav__list" role="list">
+          <li><a class="global-nav__link" href="#" data-lfr-editable-id="nav-1" data-lfr-editable-type="link">Standards</a></li>
+          <li><a class="global-nav__link" href="#" data-lfr-editable-id="nav-2" data-lfr-editable-type="link">Groups</a></li>
+          <li><a class="global-nav__link" href="#" data-lfr-editable-id="nav-3" data-lfr-editable-type="link">Get involved</a></li>
+          <li><a class="global-nav__link" href="#" data-lfr-editable-id="nav-4" data-lfr-editable-type="link">Resources</a></li>
+          <li><a class="global-nav__link" href="#" data-lfr-editable-id="nav-5" data-lfr-editable-type="link">News and events</a></li>
+          <li><a class="global-nav__link" href="#" data-lfr-editable-id="nav-6" data-lfr-editable-type="link">About</a></li>
+        </ul>
+
+        <ul class="clean-list global-nav__utility" role="list">
+          <li>
+            <a class="with-icon global-nav__utility-link" href="#" aria-label="Search">
+              <img class="icon" src="[resources:icon-search.svg]" alt="" aria-hidden="true"/>
+              <span class="hide-at-max-width">Search</span>
+            </a>
+          </li>
+          <li>
+            <a class="with-icon global-nav__utility-link" href="#" aria-label="My account">
+              <img class="icon" src="[resources:icon-avatar.svg]" alt="" aria-hidden="true"/>
+              <span>My account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="global-nav__backdrop" data-trigger="mobile-nav-close" aria-hidden="true"></div>
+    </div>
+  </nav>
+</header>

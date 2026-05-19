@@ -1,0 +1,37 @@
+/* W3C tabs */
+
+.tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 1px solid var(--w3c-twiki-gray, #CAC9C9);
+}
+
+.tabs__tab {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  font-weight: var(--font-weight-emphasis, 600);
+  color: var(--w3c-storm-gray, #545454);
+  cursor: pointer;
+  margin-bottom: -1px;
+  border-bottom: 3px solid transparent;
+}
+.tabs__tab:hover { color: var(--w3c-blue, #005A9C); }
+.tabs__tab[aria-selected="true"] {
+  color: var(--w3c-off-black, #111);
+  border-bottom-color: var(--w3c-blue, #005A9C);
+}
+.tabs__tab:focus-visible {
+  outline: 3px solid var(--w3c-yellow, #F9DC4A);
+  outline-offset: 2px;
+}
+
+.tabs__panel {
+  padding: 1.25rem 0;
+}
+.tabs__panel[hidden] { display: none; }
+.tabs__panel p { margin: 0; }

@@ -1,0 +1,12 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {"defaultValue": "true", "label": "Show colors",     "name": "showColors",     "type": "checkbox"},
+        {"defaultValue": "true", "label": "Show typography", "name": "showTypography", "type": "checkbox"},
+        {"defaultValue": "true", "label": "Show icons",      "name": "showIcons",      "type": "checkbox"}
+      ],
+      "label": "Styles showcase"
+    }
+  ]
+}

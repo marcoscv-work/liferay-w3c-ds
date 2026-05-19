@@ -1,0 +1,21 @@
+<div class="u-full-width hero ${configuration.isListing?then('hero--listing', '')}">
+  <div class="l-center">
+    <div class="l-sidebar hero__inner">
+      <div class="hero__text">
+        <h1 data-lfr-editable-id="hero-title" data-lfr-editable-type="rich-text">Welcome to the W3C design system</h1>
+        <p class="lead" data-lfr-editable-id="hero-lead" data-lfr-editable-type="rich-text">This design system documents the styles, components and templates available to use on your website.</p>
+      </div>
+      [#if configuration.showIllustration]
+        <aside class="hero__illustration" aria-hidden="true">
+          <img
+            class="hero__illustration-img"
+            data-lfr-editable-id="hero-illustration"
+            data-lfr-editable-type="image"
+            src="[resources:illustration-2.svg]"
+            alt=""
+          />
+        </aside>
+      [/#if]
+    </div>
+  </div>
+</div>

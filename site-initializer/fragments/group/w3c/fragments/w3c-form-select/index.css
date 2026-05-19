@@ -1,0 +1,16 @@
+.form-field__select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--w3c-off-black, #111);
+  background-color: var(--w3c-white, #FFFFFF);
+  border: 2px solid var(--w3c-storm-gray, #545454);
+  border-radius: 0;
+}
+.form-field__select:focus {
+  outline: 3px solid var(--w3c-yellow, #F9DC4A);
+  outline-offset: 0;
+  border-color: var(--w3c-off-black, #111);
+}

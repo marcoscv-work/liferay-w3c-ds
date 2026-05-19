@@ -1,0 +1,15 @@
+[#assign variant = configuration.variant!'primary' /]
+[#assign cls = 'button' /]
+[#if variant == 'alt']   [#assign cls = 'button button--alt' /]   [/#if]
+[#if variant == 'ghost'] [#assign cls = 'button button--ghost' /] [/#if]
+[#if configuration.wide] [#assign cls = cls + ' button--wide' /]   [/#if]
+
+<a
+  class="${cls}"
+  data-lfr-editable-id="btn-link"
+  data-lfr-editable-type="link"
+  href="#"
+  [#if configuration.disabled]aria-disabled="true" tabindex="-1"[/#if]
+>
+  <span data-lfr-editable-id="btn-label" data-lfr-editable-type="text">Button</span>
+</a>

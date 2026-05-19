@@ -1,0 +1,30 @@
+/* W3C breadcrumb */
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  font-size: var(--font-size-eris, 0.875rem);
+}
+
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumb li + li::before {
+  content: "›";
+  margin-right: 0.5rem;
+  color: var(--w3c-storm-gray, #545454);
+}
+
+.breadcrumb a {
+  color: var(--w3c-blue, #005A9C);
+}
+
+.breadcrumb a[aria-current="page"] {
+  color: var(--w3c-off-black, #111);
+  text-decoration: none;
+  font-weight: var(--font-weight-emphasis, 600);
+  pointer-events: none;
+}

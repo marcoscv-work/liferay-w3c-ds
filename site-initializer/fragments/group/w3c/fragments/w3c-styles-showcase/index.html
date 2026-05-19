@@ -1,0 +1,98 @@
+<div class="styles-showcase">
+
+  [#if configuration.showColors]
+    <section class="styles-showcase__section" aria-labelledby="styles-colors">
+      <h2 id="styles-colors">Colors</h2>
+      <p class="lead">The W3C palette is built around a brand blue, neutral greys, and accent colors for states and feedback.</p>
+
+      <h3>Theme</h3>
+      <ul class="swatches clean-list" role="list">
+        <li class="swatch"><span class="swatch__chip" style="background:#005A9C"></span><span class="swatch__name">$w3c-blue</span><code>#005A9C</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#002A56"></span><span class="swatch__name">$deep-blue</span><code>#002A56</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#CBE0FB"></span><span class="swatch__name">$light-blue</span><code>#CBE0FB</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#F9DC4A"></span><span class="swatch__name">$yellow (focus)</span><code>#F9DC4A</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#75336C"></span><span class="swatch__name">$purple (visited)</span><code>#75336C</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#FC7750"></span><span class="swatch__name">$coral</span><code>#FC7750</code></li>
+      </ul>
+
+      <h3>Neutrals</h3>
+      <ul class="swatches clean-list" role="list">
+        <li class="swatch"><span class="swatch__chip swatch__chip--border" style="background:#FFFFFF"></span><span class="swatch__name">$white</span><code>#FFFFFF</code></li>
+        <li class="swatch"><span class="swatch__chip swatch__chip--border" style="background:#FAFAFA"></span><span class="swatch__name">$off-white</span><code>#FAFAFA</code></li>
+        <li class="swatch"><span class="swatch__chip swatch__chip--border" style="background:#F8F8FB"></span><span class="swatch__name">$mist-gray</span><code>#F8F8FB</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#E5E5E5"></span><span class="swatch__name">$mercury-grey</span><code>#E5E5E5</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#CAC9C9"></span><span class="swatch__name">$twiki-gray</span><code>#CAC9C9</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#AAAAAA"></span><span class="swatch__name">$grey</span><code>#AAAAAA</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#545454"></span><span class="swatch__name">$storm-gray</span><code>#545454</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#111111"></span><span class="swatch__name">$off-black</span><code>#111111</code></li>
+      </ul>
+
+      <h3>Feedback</h3>
+      <ul class="swatches clean-list" role="list">
+        <li class="swatch"><span class="swatch__chip" style="background:#046704"></span><span class="swatch__name">$success-color</span><code>#046704</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#A82615"></span><span class="swatch__name">$error-color</span><code>#A82615</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#C28605"></span><span class="swatch__name">$warning-color</span><code>#C28605</code></li>
+        <li class="swatch"><span class="swatch__chip" style="background:#002A56"></span><span class="swatch__name">$info-color</span><code>#002A56</code></li>
+      </ul>
+    </section>
+  [/#if]
+
+  [#if configuration.showTypography]
+    <section class="styles-showcase__section" aria-labelledby="styles-typography">
+      <h2 id="styles-typography">Typography</h2>
+      <p class="lead">The W3C design system uses <strong>Noto Sans</strong> (with Trebuchet MS as a fallback). Headings follow a "planet" scale.</p>
+
+      <dl class="type-table">
+        <dt>.txt-venus / h1</dt>
+        <dd><span style="font-size:2.0625rem;line-height:1.3;font-weight:600">Welcome to the W3C design system</span></dd>
+
+        <dt>.txt-earth / h2</dt>
+        <dd><span style="font-size:1.6875rem;line-height:1.25;font-weight:600">A worldwide community for the Web</span></dd>
+
+        <dt>.txt-mars / h3</dt>
+        <dd><span style="font-size:1.5rem;line-height:1.4;font-weight:600">Standards for an open Web</span></dd>
+
+        <dt>.txt-jupiter / h4</dt>
+        <dd><span style="font-size:1.25rem;line-height:1.6;font-weight:600">Working groups and community</span></dd>
+
+        <dt>.txt-saturn / h5</dt>
+        <dd><span style="font-size:1.125rem;line-height:1.5;font-weight:600">Specifications and reports</span></dd>
+
+        <dt>.lead</dt>
+        <dd><span style="font-size:1.4375rem;line-height:1.4">This design system documents the styles, components and templates available to use on your website.</span></dd>
+
+        <dt>body</dt>
+        <dd><span style="font-size:1rem;line-height:1.5">The goal of the Web is to serve humanity. We build it now so that those who come to it later will be able to create things that we cannot ourselves imagine.</span></dd>
+
+        <dt>.txt-eris / 14px</dt>
+        <dd><span style="font-size:0.875rem;line-height:1.5">Used for footer text, captions, language nav and meta information.</span></dd>
+      </dl>
+    </section>
+  [/#if]
+
+  [#if configuration.showIcons]
+    <section class="styles-showcase__section" aria-labelledby="styles-icons">
+      <h2 id="styles-icons">SVG icons</h2>
+      <p class="lead">Icons ship as standalone SVG files in the fragment collection resources. Use them inline with <code>currentColor</code> for theming.</p>
+
+      <ul class="icon-grid clean-list" role="list">
+        <li class="icon-tile"><img src="[resources:icon-search.svg]"        alt="" aria-hidden="true"/><code>search</code></li>
+        <li class="icon-tile"><img src="[resources:icon-github.svg]"        alt="" aria-hidden="true"/><code>github</code></li>
+        <li class="icon-tile"><img src="[resources:icon-mastodon.svg]"      alt="" aria-hidden="true"/><code>mastodon</code></li>
+        <li class="icon-tile"><img src="[resources:icon-envelope.svg]"      alt="" aria-hidden="true"/><code>envelope</code></li>
+        <li class="icon-tile"><img src="[resources:icon-calendar.svg]"      alt="" aria-hidden="true"/><code>calendar</code></li>
+        <li class="icon-tile"><img src="[resources:icon-external-link.svg]" alt="" aria-hidden="true"/><code>external-link</code></li>
+        <li class="icon-tile"><img src="[resources:icon-lock.svg]"          alt="" aria-hidden="true"/><code>lock</code></li>
+        <li class="icon-tile"><img src="[resources:icon-rss.svg]"           alt="" aria-hidden="true"/><code>rss</code></li>
+        <li class="icon-tile"><img src="[resources:icon-avatar.svg]"        alt="" aria-hidden="true"/><code>avatar</code></li>
+        <li class="icon-tile"><img src="[resources:icon-menu.svg]"          alt="" aria-hidden="true"/><code>menu</code></li>
+        <li class="icon-tile"><img src="[resources:icon-close.svg]"         alt="" aria-hidden="true"/><code>close</code></li>
+        <li class="icon-tile"><img src="[resources:icon-plus.svg]"          alt="" aria-hidden="true"/><code>plus</code></li>
+        <li class="icon-tile"><img src="[resources:icon-minus.svg]"         alt="" aria-hidden="true"/><code>minus</code></li>
+        <li class="icon-tile"><img src="[resources:icon-arrow-right.svg]"   alt="" aria-hidden="true"/><code>arrow-right</code></li>
+        <li class="icon-tile"><img src="[resources:icon-chevron-down.svg]"  alt="" aria-hidden="true"/><code>chevron-down</code></li>
+      </ul>
+    </section>
+  [/#if]
+
+</div>

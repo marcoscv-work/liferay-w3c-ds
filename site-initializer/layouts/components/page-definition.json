@@ -1,0 +1,976 @@
+{
+    "pageElement": {
+        "pageElements": [
+            {
+                "definition": {
+                    "fragment": {
+                        "key": "w3c-hero"
+                    },
+                    "fragmentConfig": {
+                        "showIllustration": false,
+                        "isListing": true
+                    },
+                    "fragmentFields": [
+                        {
+                            "id": "hero-title",
+                            "value": {
+                                "fragmentLink": {},
+                                "text": {
+                                    "value_i18n": {
+                                        "en_US": "Components"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "id": "hero-lead",
+                            "value": {
+                                "fragmentLink": {},
+                                "text": {
+                                    "value_i18n": {
+                                        "en_US": "Reusable building blocks for W3C websites."
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "indexed": true
+                },
+                "type": "Fragment"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-xs"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-breadcrumb"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Buttons"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "gutters": true,
+                            "numberOfColumns": 3
+                        },
+                        "pageElements": [
+                            {
+                                "definition": {
+                                    "size": 4
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-button"
+                                            },
+                                            "fragmentConfig": {
+                                                "variant": "primary"
+                                            },
+                                            "fragmentFields": [
+                                                {
+                                                    "id": "btn-label",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": ".button"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 4
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-button"
+                                            },
+                                            "fragmentConfig": {
+                                                "variant": "alt"
+                                            },
+                                            "fragmentFields": [
+                                                {
+                                                    "id": "btn-label",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": ".button--alt"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 4
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-button"
+                                            },
+                                            "fragmentConfig": {
+                                                "variant": "ghost"
+                                            },
+                                            "fragmentFields": [
+                                                {
+                                                    "id": "btn-label",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": ".button--ghost"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            }
+                        ],
+                        "type": "Row"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Cards"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "gutters": true,
+                            "numberOfColumns": 3
+                        },
+                        "pageElements": [
+                            {
+                                "definition": {
+                                    "size": 4
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-card"
+                                            },
+                                            "fragmentConfig": {
+                                                "modifier": "news",
+                                                "showImage": true,
+                                                "showHeading": true,
+                                                "showText": true,
+                                                "showLink": true
+                                            },
+                                            "fragmentFields": [],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 4
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-card"
+                                            },
+                                            "fragmentConfig": {
+                                                "modifier": "event",
+                                                "showImage": true,
+                                                "showHeading": true,
+                                                "showText": true,
+                                                "showLink": true
+                                            },
+                                            "fragmentFields": [],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 4
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-card"
+                                            },
+                                            "fragmentConfig": {
+                                                "modifier": "member",
+                                                "showImage": true,
+                                                "showHeading": true,
+                                                "showText": true,
+                                                "showLink": true
+                                            },
+                                            "fragmentFields": [],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            }
+                        ],
+                        "type": "Row"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Notes"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-note"
+                            },
+                            "fragmentConfig": {
+                                "variant": "info"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "note-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Information"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-note"
+                            },
+                            "fragmentConfig": {
+                                "variant": "success"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "note-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Success"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-note"
+                            },
+                            "fragmentConfig": {
+                                "variant": "warning"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "note-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Warning"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-note"
+                            },
+                            "fragmentConfig": {
+                                "variant": "error"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "note-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Error"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Collapsible containers"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-accordion"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Tabs"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-tabs"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Tag list"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-tag-list"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Form controls"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "gutters": true,
+                            "numberOfColumns": 2
+                        },
+                        "pageElements": [
+                            {
+                                "definition": {
+                                    "size": 6
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-form-input"
+                                            },
+                                            "fragmentConfig": {
+                                                "type": "text",
+                                                "showHint": true,
+                                                "showError": false
+                                            },
+                                            "fragmentFields": [],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 6
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-form-input"
+                                            },
+                                            "fragmentConfig": {
+                                                "type": "email",
+                                                "showHint": false,
+                                                "showError": true
+                                            },
+                                            "fragmentFields": [
+                                                {
+                                                    "id": "input-label",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Email"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "id": "input-error",
+                                                    "value": {
+                                                        "fragmentLink": {},
+                                                        "text": {
+                                                            "value_i18n": {
+                                                                "en_US": "Please enter a valid email."
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 6
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-form-select"
+                                            },
+                                            "fragmentConfig": {},
+                                            "fragmentFields": [],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 6
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-form-textarea"
+                                            },
+                                            "fragmentConfig": {},
+                                            "fragmentFields": [],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 6
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-form-checkbox"
+                                            },
+                                            "fragmentConfig": {},
+                                            "fragmentFields": [],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {
+                                    "size": 6
+                                },
+                                "pageElements": [
+                                    {
+                                        "definition": {
+                                            "fragment": {
+                                                "key": "w3c-form-radio"
+                                            },
+                                            "fragmentConfig": {},
+                                            "fragmentFields": [],
+                                            "indexed": true
+                                        },
+                                        "type": "Fragment"
+                                    }
+                                ],
+                                "type": "Column"
+                            }
+                        ],
+                        "type": "Row"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Pagination"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-pagination"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Quote"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-quote"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "w3c-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-section-heading"
+                            },
+                            "fragmentConfig": {
+                                "level": "h2"
+                            },
+                            "fragmentFields": [
+                                {
+                                    "id": "section-heading",
+                                    "value": {
+                                        "fragmentLink": {},
+                                        "text": {
+                                            "value_i18n": {
+                                                "en_US": "Disclosure"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "w3c-disclosure"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            }
+        ],
+        "type": "Root"
+    },
+    "settings": {
+        "masterPage": {
+            "key": "main"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {"defaultValue": "true", "label": "Show feedback banner", "name": "showBanner", "type": "checkbox"},
+        {"defaultValue": "true", "label": "Show language nav",    "name": "showLang",   "type": "checkbox"}
+      ],
+      "label": "Header"
+    }
+  ]
+}
